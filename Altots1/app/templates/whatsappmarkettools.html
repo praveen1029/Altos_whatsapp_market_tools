@@ -1,0 +1,1058 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+  <title>Digital marketing company in Kerala | SEO, SEM, SMM, Branding</title>
+  <meta name="description"
+    content="As the stronghold of the best digital marketing agency in India we always provide exceptional digital marketing services in seo, sem, smm, ppc online marketing." />
+
+  <meta property="og:url" content="https://altostechnologies.in/digital" />
+  <meta property="og:type" content="Website" />
+  <meta property="og:title" content="Digital marketing company in Kerala | SEO, SEM, SMM, Branding" />
+  <meta property="og:description"
+    content="As the stronghold of the best digital marketing agency in India we always provide exceptional digital marketing services in seo, sem, smm, ppc online marketing." />
+  <meta property="og:image" content="https://altostechnologies.in/static/images/logo.png" />
+
+  <link rel="shortcut icon" href="{% static 'images/logo.png' %}" />
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Digital marketing company in Kerala | SEO, SEM, SMM, Branding">
+  <meta name="twitter:description"
+    content="As the stronghold of the best digital marketing agency in India we always provide exceptional digital marketing services in seo, sem, smm, ppc online marketing.">
+  <link href="https://altostechnologies.in/digital" rel="canonical" />
+
+  <meta name="google-site-verification" content="LoY-CVPuvtWVxYhyHkd4SRk0wuvxUq9279OLySrjqdc" />
+
+  <!-- Favicons -->
+  <link href="{% static 'img/logo-icon.png' %}" rel="icon">
+  <link href="{% static 'img/logo-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+  <!-- xmas Theme -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <link rel="stylesheet" href="{% static 'css/xmas.css' %}">
+  <script src="{% static 'js/xmas.js' %}"></script>
+
+  <style>
+    .logo .first-span {
+      font-weight: 500;
+      text-align: center;
+      font-size: 29px;
+      font-family: Hack, sans-serif;
+      background: linear-gradient(rgb(18, 167, 180), rgb(57, 209, 201), rgb(11, 111, 138));
+
+      letter-spacing: 2px;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      position: relative;
+    }
+    .mob{
+      margin-top: -20rem;
+      margin-right: -2rem;
+    }
+    .top_tree_effect{
+      margin-top: -1.7rem;
+    }
+    .top_light_effect{
+      margin-top: 4.1rem;
+    }
+    @media screen and (max-width:280px){
+      .top_tree_effect{
+        margin-top: -1.5rem;
+      }
+      .top_light_effect{
+        margin-top: 2rem;
+      }
+      .card_xmas{
+        margin-top: 3rem;
+      }
+      #img_card_hover{
+        visibility: hidden;
+      }
+    }
+    @media screen and (max-width:250px)
+    {  
+      .tree{
+        width: 5rem;
+      }
+      .mob{
+        margin-top: -20rem;
+        margin-right: -2rem;
+      }
+    }
+    .card_xmas{
+      background-image: url("{% static '/xmas/cards/card1.png' %}");
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: auto;
+      text-shadow: 3px 3px 3px black;
+      border-radius: 10px;
+      transition: all 0.2s linear;
+    }
+    .ts{
+      text-shadow: 1px 1px 1px black;
+    }
+    .ts_md_light{
+      text-shadow: 3px 3px 3px white;
+    }
+    .ts_md_light{
+      text-shadow: 3px 3px 3px black;
+    }
+    #img_card_hover{
+      transition: all 0.2s linear;
+    }
+    #xmas_cap{
+      width: 7rem;
+    }
+    .xmas_cap_top{
+      margin-left: 27.5rem;
+      margin-top: 1.5rem;
+      transform: rotate(10deg);
+    }
+    #user_exp{
+      background-image: url('{% static "xmas/cards/card_bag_1.jpg" %}');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    #xmas_santa_gif{
+      transform: rotate(-10deg);
+      width: 15rem;
+      margin-top: -15rem;
+    }
+    .xmas_santa_git_top{
+      transform: rotate(10deg);
+      margin-left: 5rem;
+    }
+    #xmas_bell_top{
+      width: 5rem;
+    }
+    .xmas_silk_gif{
+      margin-top: 3rem;
+      margin-left: 2rem;
+      transform: rotate(-35deg);
+    }
+    .xmas_star_gif_top{
+      margin-top: -4rem;
+      margin-right: 8rem;
+    }
+    #xmas_star_gif{
+      width: 15rem;
+    }
+    #xmas_bell{
+      width: 5rem;
+    }
+    .xmas_bell_top{
+      /* background-image: url("{% static 'xmas/decor/xmas_ball.png' %}"); */
+      margin-top: -1rem;
+      margin-left: 1rem;
+      /* width: 100%;
+      height: 100%; */
+      /* background-repeat: no-repeat;
+      background-size: contain; */
+    }
+  </style>
+</head>
+
+
+<body>
+
+  <div class="position-relative" style="z-index: 1;">
+    <div class="position-absolute" style="width: 100%;height: 100%;">
+      <div class="snow-container"></div>
+    </div>
+  </div>
+
+<!-- ======= Header ======= -->
+  <header id="header" class="fixed-top green-blue" style="padding-top: 1.5rem;background-color: rgba(0, 0, 0, 0.425);z-index: 2;">
+    <div class="position-relative" style="z-index: 1;">
+      <div class="position-absolute start-0 top-0 top_tree_effect">
+        <div class="d-flex">
+          <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+          <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+          <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+          <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+          <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+          <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+          <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+          <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+          <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+          <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+          <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+          <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="container d-flex align-items-center justify-content-lg-between">
+
+      <h1 class="logo me-auto me-lg-0">
+        <a href="{% url 'text_page' %}">
+          <!-- <video src="static/img/logo.mp4"></video> -->
+          <img src="{% static 'img/lg2.gif' %}" class="" alt="Logo Gif">
+          <!-- <img src="static/img/logo-icon.png" class="">
+        <span class="first-span">ALTOS Technologies</span>  -->
+        </a>
+      </h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar order-last order-lg-0" style="z-index: 10;" >
+        <ul>
+          <li><a class="nav-link scrollto hom " href="{% url 'text_page' %}">Home</a></li>
+          <li><a class="nav-link scrollto abot" href="{% url 'aboutus' %}">About us</a></li>
+          <li><a style="color: #ff3939;" class="nav-link scrollto serv" href="{% url 'service' %}">Services</a></li>
+          <li><a class="nav-link scrollto  cor " href="{% url 'core' %}">Product</a></li>
+          <li><a class="nav-link scrollto  cors " href="{% url 'vacancy' %}">Career</a></li>
+
+          <li><a class="nav-link scrollto event" href="{% url 'events' %}">Events</a></li>
+          <li><a class="nav-link scrollto cont" href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <!-- <a href="#about" class="get-started-btn scrollto">Get Started</a> -->
+
+    </div>
+  </header><!-- End Header -->
+
+<!-- Service page CSS-->
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=EB+Garamond&family=Heebo:wght@600;700&family=Montserrat&family=Mulish:wght@200&family=Poppins:wght@200;300&family=Raleway:wght@200&family=Work+Sans:wght@200&display=swap');
+
+  #navbar .serv {
+    color: #189aa6;
+    font-weight: 800;
+  }
+
+  .container-fluid {
+    max-height: 120vh;
+    overflow-y: scroll;
+    background: fixed;
+    padding: 0;
+    background: url("/static/img/bg1.gif") top center;
+    background-size: fill;
+    margin-bottom: auto;
+    margin-top: auto;
+    position: relative;
+  }
+
+  #whatsapp_market {
+    width: 100%;
+    position: relative;
+    background: #00000099;
+  }
+
+  #containet-top-head {
+    padding-top: 5em;
+    text-align: center;
+  }
+
+  #service-box {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    background: #00000099;
+    flex-wrap: wrap;
+    gap: 1.5em;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+  }
+
+  #service-box .box-service {
+    width: 290px;
+    position: relative;
+    padding: 1em 1.7em;
+    background: rgb(153 153 153 / 27%);
+  }
+
+  .box-contents box-contents {
+    font-size: 1.5em;
+  }
+
+  #service-box .box-service:hover {
+    background: rgba(0, 0, 0, 0.79);
+  }
+
+  .box-service h4 {
+    color: #f5f5f5;
+    opacity: 0.9;
+    font-weight: 600;
+    font-family: Hind Siliguri;
+    font-size: 22px;
+    margin-bottom: 1em;
+  }
+
+  .box-service .icon {
+    margin-bottom: 0.50em;
+    font-size: 1.5em;
+  }
+
+  .box-service p {
+    color: #b2b2b2;
+    line-height: 1.7em;
+    text-align: center;
+  }
+
+  #containet-top-head .section-title {
+    margin-top: 1em;
+  }
+
+  @media screen and (max-width:768px) {
+    #service-box {
+      text-align: center;
+    }
+
+    #whatsapp_market {
+      height: auto;
+    }
+
+    #whatsapp_market .section-title p {
+      font-size: 1.7em !important;
+    }
+
+    #containet-top-head {
+      padding-top: 3.1em
+    }
+  }
+
+  #whatsapp_market .section-title p {
+    font-size: 3rem;
+  }
+
+  #red_top{
+    width: 10rem;
+  }
+
+  .red_top_top{
+    margin-left: -2rem;
+    margin-top: -1.45rem;
+  }
+
+  .xmas_text{
+    color: white;
+    text-shadow: 3px 3px 10px rgba(255, 0, 0, 0.797);
+  }
+
+  .xmas-button{
+    font-size: 1em;
+    background: linear-gradient(
+        45deg,
+        #840000,
+        rgb(187, 0, 0),
+        #5c0404 100%
+        );
+    font-weight: 600;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 4px;
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 100px;
+    width: 35vh;
+  }
+
+  @media (max-width: 768px) {
+    .xmas-button {
+      margin: 20px 20px;
+    }
+  }
+
+  .img-box-tech.image-visible{
+    width: 530px;
+    height: auto;
+  }
+
+  .img-box-tech img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5%;
+  }
+  .img-box-tech.image-hidden{
+    display: none;
+  }
+  @media screen and (max-width:768px) {
+    .img-box-tech.image-hidden{
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 1em;
+    }
+    .img-box-tech.image-visible{
+      display: none;
+    }
+    .content-boxs h2 {
+      text-align: center;
+    }
+  }
+
+  #santa_peek11{
+    width: 10rem;
+  }
+
+  .santa_peek11_top{
+    margin-left: -6.5rem;
+    margin-top: 28vh;
+  }
+
+  #santa_peek22{
+    width: 10rem;
+  }
+
+  .santa_peek22_top{
+    margin-right: -6.5rem;
+  }
+
+  @media screen and (max-width:768px) {
+    .santa_peek11_top{
+        display: none;
+    }  
+    .santa_peek22_top{
+      display: none;
+    }
+  }
+
+  #santapen{
+    width: 15rem;
+  }
+
+  .santapen_top{
+    margin-top: -13.8rem;
+    margin-left: 30rem;
+  }
+
+  @media screen and (max-width:540px){
+    #santapen{
+      width: 7rem;
+    }
+    .santapen_top{
+      margin-top: -30.8rem;
+      margin-left: 30rem;
+    }
+  }
+
+
+  .enquiry-form input,
+  select {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background: none;
+    outline: none;
+    resize: none;
+    border: 0;
+    font-family: 'Montserrat', sans-serif;
+    transition: all .3s;
+    border-bottom: 2px solid #bebed2;
+    color: #d9dad9;
+  }
+
+  .enquiry-form input:focus,
+  option:focus {
+    border-bottom: 2px solid #147b92
+  }
+
+  .enquiry-form option{
+    color: black;
+  }
+
+  @media screen and (max-width:540px){
+    .enquiry-form input{
+      width: 40vh;
+      margin-left: -15vh;
+      box-sizing: border-box;
+      background: none;
+      outline: none;
+      resize: none;
+      border: 0;
+      font-family: 'Montserrat', sans-serif;
+      transition: all .3s;
+      border-bottom: 2px solid #bebed2;
+      color: #d9dad9;
+  }
+
+    .enquiry-form select{
+      width: 40vh;
+      margin-left: -15vh;
+    }
+  }
+
+  @media screen and (max-width:768px) {
+    #more-head{
+      font-size: 1.7em !important;
+      margin-top: 1em;
+    }
+
+    #more-about-you .sub-head{
+      margin-top: 2em !important;
+      font-size: 1em !important;
+    }
+  }
+
+  #more-about-you {
+    padding: 1em 1em 0em;
+    text-align: center;
+  }
+
+  #more-head {
+    font-size: 3em !important;
+    margin-top: 2em;
+  }
+
+  #more-head::after {
+    content: '';
+    display: block;
+    width: 25%;
+    margin: 0.2em auto 0.5em;
+    height: 1px;
+    background-color: white;
+    margin-top: 5px;
+  }
+
+  #more-about-you .sub-head{
+    width: 50%;
+    margin-left: 25%;
+  }
+
+  .dig-mark-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    background: #00000099;
+    padding: 1em 0.20em;
+  }
+
+  #price-head{
+    font-size: 3em;
+  }
+
+  @media screen and (max-width:768px) {
+    #price-head{
+      font-size: 1.7em!important;
+    }
+  }
+
+
+    @media screen and (max-width:768px) {
+      iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      margin-left: 0;
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%; /* Adjust this value based on your video's aspect ratio (100 / (16/9) = 56.25%) */
+      height: 0;
+    }
+  }
+
+</style>
+
+<div class="container-fluid">
+  <section id="whatsapp_market">
+    <div id="containet-top-head">
+      <br><br><br>
+      <div class="section-title">
+        <p class="xmas_text" data-aos="fade-up" data-aos-duration="750">Improve Your Audience with <br> ALT Whatsapp Module</p>
+        <br><br>
+        <div data-aos="fade-up" data-aos-duration="750" >
+          <span class="text-white" style="font-size: 1.2rem;">Get the Best ALT Whatsapp Module for Your Business Today</span>
+        </div>
+        <br><br>
+        <a role="button" href="#" class="xmas-button text-white" data-aos="fade-up" data-aos-duration="750">Request Product Demo</a>
+        <a role="button" href="#" class="xmas-button text-white"  data-aos="fade-up" data-aos-duration="750">Get Started</a>
+      </div>
+      
+      <br><br>
+
+      <section style="margin-top: 2vh;" class="d-none d-sm-block">
+        <div  style="background-color: rgba(0, 0, 0, 0.2);">
+          <iframe width="640" height="360" src="https://www.youtube.com/embed/TckRoYxLzpo" allowfullscreen ></iframe>
+        </div>
+      </section>
+
+      <section style="margin-top: 2vh;" class="d-lg-none" >
+        <div class="video-container" style="background-color: rgba(0, 0, 0, 0.2);">
+          <iframe src="https://www.youtube.com/embed/TckRoYxLzpo" allowfullscreen ></iframe>
+        </div>
+      </section>
+
+      <section class="pb-0">
+        <div class="container mt-5">
+          <div class="row  g-3 content-boxs-parent border-0 rounded-4">
+            <div class="position-relative" style="z-index: 9999;">
+              <div class="position-absolute santa_peek11_top">
+                <img id="santa_peek11" draggable="false" src="{% static 'xmas/decor/xmaspap_peek.png' %}" alt="">
+              </div>
+            </div>
+            <div class="section-title xmas_text">  
+              <p>Any best points to highlight <br> about module</p>
+            </div>
+            <div class="col-lg-6 col-sm-12 col-md-6 px-3 mt-5">
+              <div class="content-boxs border-0 rounded-4 background_img1">
+                <h2 class="xmas_text text-light">Point 1 </h2>
+                <div class="img-box-tech image-hidden">
+                  <div class="position-relative" style="z-index: 1;">
+                    <div class="position-absolute" style="margin-top: -4rem;">
+                      <img draggable="false" src="{% static 'xmas/decor/lights/light2_full.png' %}" alt="">
+                    </div>
+                  </div>
+                  <img src="/static/img/team/erp.png" alt="ERP" />
+                </div>
+                <p class="text-light" style="font-size: larger;">
+                  Our ALT Whatsapp Module are made of high-quality materials to ensure durability and reliability. 
+                  We offer products that are designed to meet the needs of our clients and provide the best possible value for their money.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-6 col-sm-12 col-md-6 px-4 d-flex align-items-center mt-5">
+              <div class="img-box-tech image-visible" style="margin-top: -19vh;">
+                <div class="position-relative" style="z-index: 1;">
+                  <div class="position-relative" >
+                    <img draggable="false" src="{% static 'xmas/decor/lights/light2_full.png' %}" alt="">
+                  </div>
+                </div>
+                <img src="/static/img/team/erp.png" alt="ERP" style="margin-top: -30rem;" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <br><br>
+      <section class="pt-0">
+        <div class="container mt-3">
+          <div class="row  g-3 content-boxs-parent border-0 rounded-4">>
+            <div class="position-relative" style="z-index: 1;">
+              <div class="position-absolute end-0 santa_peek22_top">
+                <img id="santa_peek22" draggable="false" src="{% static 'xmas/decor/xmaspap_peek_left.png' %}" alt="">
+              </div>
+            </div>
+            <div class="col-lg-6 col-sm-12 col-md-6 px-4 d-flex align-items-center">
+              <div class="img-box-tech image-visible">
+                <div class="position-relative" style="z-index: 1;">
+                  <div class="position-absolute" style="margin-top: -8rem;">
+                    <img draggable="false" src="{% static 'xmas/decor/lights/light2_full.png' %}" alt="">
+                  </div>
+                </div>
+                <img src="/static/img/team/crm.png" alt="CRM" />
+              </div>
+            </div>
+            <div class="col-lg-6 col-sm-12 col-md-6 px-3">
+              <div class="content-boxs border-0 rounded-4">
+                <h2 class="xmas_text text-light">Point 2</h2>
+                <div class="img-box-tech image-hidden">
+                  <div class="position-relative" style="z-index: 1;">
+                    <div class="position-absolute" style="margin-top: -4rem;">
+                      <img draggable="false" src="{% static 'xmas/decor/lights/light2_full.png' %}" alt="">
+                    </div>
+                  </div>
+                  <img src="/static/img/team/crm.png" alt="CRM"/>
+                </div>
+                <p class="text-white" style="font-size: larger;">
+                  We understand the importance of timely delivery of products to our clients. 
+                  That's why we offer fast and reliable shipping services to ensure that you receive your ALT Whatsapp Module on time.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <br><br><br><br>
+      
+      <div class="container mt-5" id="service-box">
+        <div class="box-service" >
+          <div class="box-contents">
+            <div class="position-relative" style="z-index: 1;">
+              <div class="position-absolute red_top_top">
+                <img id="red_top" draggable="false" src="{% static 'xmas/decor/new_ribbons/red_ribbon_top.png' %}" alt="">
+              </div>
+            </div>
+            <h4 style="color:#ffb700"> Marketing </span> </h4>
+          </div>
+        </div>
+
+        <div class="box-service">
+          <div class="box-contents">
+            <div class="position-relative" style="z-index: 1;">
+              <div class="position-absolute red_top_top">
+                <img id="red_top" draggable="false" src="{% static 'xmas/decor/new_ribbons/red_ribbon_top.png' %}" alt="">
+              </div>
+            </div>
+            <h4 style="color:#ffb700">Marketing</span> </h4>
+          </div>
+        </div>
+
+        <div class="box-service">
+          <div class="box-contents">
+            <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_top_top">
+                  <img id="red_top" draggable="false" src="{% static 'xmas/decor/new_ribbons/red_ribbon_top.png' %}" alt="">
+              </div>
+            </div>
+            <h4 style="color:#ffb700">Marketing </span> </h4>
+          </div>
+        </div>
+
+        <div class="box-service">
+          <div class="box-contents">
+            <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_top_top">
+                  <img id="red_top" draggable="false" src="{% static 'xmas/decor/new_ribbons/red_ribbon_top.png' %}" alt="">
+              </div>
+            </div>
+            <h4 style="color:#ffb700">Marketing</span> </h4>
+          </div>
+        </div>
+
+        <div class="container">
+          <div id="contact-form-section" class="row mb-0">
+            <div class="position-relative" style="z-index: 1;">
+              <div class="position-absolute santapen_top end-0">
+                <img id="santapen" draggable="false" src="{% static 'xmas/decor/santa_with_pen.png' %}" alt="">
+              </div>
+            </div>
+
+            <br><br>
+    
+            <div class="col-lg-12 col-md-12 mt-5 mb-3 mt-lg-0 d-flex justify-content-center">
+              <form action="{% url 'enquerys' %}" method="post"  class="enquiry-form" style="width: 30%;">
+                {% csrf_token %}
+                <div class="form-group mt-3">
+                  <label for="Name" class="text-white" >Name</label>
+                  <input type="text" class="form-control" name="Name" id="Name" placeholder="Write your name here.." required>
+                </div>
+                <div class="form-group mt-3">
+                  <label for="Email" class="text-white">Email</label>
+                  <input type="text" class="form-control" name="Email" id="Email" placeholder="Let us know how to contact you back.." required>
+                </div>
+                <div class="form-group mt-3">
+                  <label for="Phone" class="text-white">Phone</label>
+                  <input type="text" class="form-control" name="Phone" id="Phone" placeholder="Let us know your number" pattern="[1-9]{1}[0-9]{9}" required>
+                </div>
+                <div class="form-group mt-3">
+                  <label for="project" class="text-white">Technologies</label>
+                  <br>
+                  <select name="project" required>
+                    <option value="SEO Optimization">
+                      <p class="options pt-2">SEO Optimization</p>
+                    </option>
+                    <option value="YouTube Marketing">
+                      <p class="options pt-2">YouTube Marketing</p>
+                    </option>
+                    <option value="LinkedIn Marketing">
+                      <p class="options pt-2">LinkedIn Marketing</p>
+                    </option>
+                    <option value="WhatsApp Marketing">
+                      <p class="options pt-2">WhatsApp Marketing</p>
+                    </option>
+                    <option value="SMS Marketing">
+                      <p class="options pt-2">SMS Marketing</p>
+                    </option>
+                    <option value="Email Marketing">
+                      <p class="options pt-2">Email Marketing</p>
+                    </option>
+                    <option value="App store Optimization">
+                      <p class="options">App store Optimization</p>
+                    </option>
+                    <option value="Digital Marketing">
+                      <p class="options pt-2"> Digital Marketing</p>
+                    </option>
+                    <option value="Content Marketing">
+                      <p class="options pt-2"> Content Marketing</p>
+                    </option>
+                    <option value="Whatsapp Marketing Tools">
+                      <p class="options pt-2"> Whatsapp Marketing Tools</p>
+                    </option>
+                    <option value="Email Marketing Tools ">
+                      <p class="options pt-2"> Email Marketing Tools </p>
+                    </option>
+                    <option value="Website Development ">
+                      <p class="options pt-2"> Website Development </p>
+                    </option>
+                    <option value="Data Entry">
+                      <p class="options pt-2"> Data Entry</p>
+                    </option>
+                    <option value="Data Analysis">
+                      <p class="options pt-2"> Data Analysis </p>
+                    </option>
+                    <option value="Data Analysis Tools">
+                      <p class="options pt-2">Data Analysis Tools</p>
+                    </option>
+                    <option value="BPO">
+                      <p class="options pt-2">BPO</p>
+                    </option>
+                  </select>
+                </div>
+                <div class="form-group mt-3">
+                  <label for="message" class="text-white">Message</label>
+                  <input type="text" class="form-control" name="message" id="message" placeholder="What would you like to tell us.." required>
+                </div>
+                <br>
+                <div class="text-center"><button type="submit" class="form-control" style=" background-color: black; color: white;">Send</button></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <section id="more-about-you" style="z-index: 3;">
+        <br>
+        <div class="row">
+          <div class="col-12">
+            <p  id="more-head" class="xmas_text"><b>Revolutionizing Business Marketing</b></p>
+            <p class="sub-head text-white" style="font-size: larger;">
+              Revolutionize your business marketing strategies with Alt Whatsapp! Seamlessly connect with your audience, streamline communication, and unlock
+              new possibilities for growth. Elivate your brand's presence and engagement on whatsapp like never before. 
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <br><br><br><br><br>
+
+      <div class="container" id="service-box">
+        <div class="dig-mark-container">
+          <p class="xmas_text mb-3" id="price-head"><b>Plan and Pricing</b></p>
+          <div class="container" id="sub-content"></div>
+          <br><br>
+          <div class="box-service" style="margin-bottom: 3vh;" >
+            <div class="box-contents" style="height: 50%;">
+              <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_top_top">
+                  <img id="red_top" draggable="false" src="{% static 'xmas/decor/new_ribbons/blue_ribbon_top.png' %}" alt="">
+                </div>
+              </div>
+              <h4 style="color:#ffb700">1</span> </h4>
+              <p> Describe your service here. What makes it great? Use short catchy text to tell people what you offer, and the benefits they will receive. 
+                A great description gets readers in the mood, and makes them more likely to go ahead and book.
+              </p>
+            </div>
+          </div>
+
+          <div class="box-service" style="margin-bottom: 3vh;">
+            <div class="box-contents" style="height: 50%;">
+              <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_top_top">
+                  <img id="red_top" draggable="false" src="{% static 'xmas/decor/new_ribbons/blue_ribbon_top.png' %}" alt="">
+                </div>
+              </div>
+              <h4 style="color:#ffb700">2 </span> </h4>
+              <p>
+                Describe your service here. What makes it great? Use short catchy text to tell people what you offer, and the benefits they will receive.
+                A great description gets readers in the mood, and makes them more likely to go ahead and book.
+              </p>
+            </div>
+          </div>
+
+          <div class="box-service" style="margin-bottom: 3vh;" >
+            <div class="box-contents" style="height: 50%;" >
+              <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_top_top">
+                  <img id="red_top" draggable="false" src="{% static 'xmas/decor/new_ribbons/blue_ribbon_top.png' %}" alt="">
+                </div>
+              </div>
+              <h4 style="color:#ffb700">3</span> </h4>
+              <p>
+                Describe your service here. What makes it great? Use short catchy text to tell people what you offer, and the benefits they will receive. 
+                A great description gets readers in the mood, and makes them more likely to go ahead and book.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+</div>
+
+<div class="position-relative" style="z-index: 1;">
+  <div class="position-absolute">
+    <div class="d-flex">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      
+    </div>
+  </div>
+</div>
+<!-- ======= Footer ======= -->
+<footer id="footer">
+  <div class="footer-top">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-5 col-md-6">
+          <div class="footer-info">
+            <h3> <img src="{% static 'img/logo.png' %}" class="" alt="Logo"></h3>
+            <p style="font-weight: 700;color:rgb(62, 199, 206)">Kerala Branch</p>
+            <p>1st Floor - Thapasya Building<br>
+              Kakkanad, Cochin<br>
+              <strong>Phone:</strong> +91 90741 56818<br>
+
+            </p>
+            <p class="mt-2" style="font-weight: 700; color:rgb(62, 199, 206)">Tamil Nadu Branch</p>
+            <p>First floor,D Block ,Tidel park,Tharamani,<br>
+              Chennai, Tamilnadu 600113<br>
+              <strong>Phone:</strong> +91 73065 42853<br>
+              <strong>Email:</strong> Info@ altostechnologies.com<br>
+            </p>
+            <div class="social-links mt-3">
+              <!-- <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a> -->
+              <a href="https://www.facebook.com/people/ALTOS-Technologies/100084886970426/" class="facebook"><i
+                  class="bx bxl-facebook"></i></a>
+              <a href="https://www.instagram.com/altos_technologies/" class="instagram"><i
+                  class="bx bxl-instagram"></i></a>
+              <!-- <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a> -->
+              <a href="https://www.linkedin.com/company/altos-technologies-kochi/" class="linkedin"><i
+                  class="bx bxl-linkedin"></i></a>
+              <a href="https://youtube.com/@altostechnologies" class="google-plus"><i class="bx bxl-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 footer-links">
+          <h4>Qucik Links</h4>
+          <ul>
+            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'text_page' %}">Home</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'aboutus' %}">About us</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'service' %}">Services</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'core' %}">Product</a></li>
+            <!-- <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li> -->
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Qucik Links</h4>
+          <ul>
+            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'vacancy' %}">Career</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'events' %}">Events</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'contact' %}">Contact</a></li>
+            <!-- <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li> -->
+            <!-- <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li> -->
+          </ul>
+        </div>
+
+        <!-- <div class="col-lg-4 col-md-6 footer-newsletter">
+          <h4>Our Newsletter</h4>
+          <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+          <form action="" method="post">
+            <input type="email" name="email"><input type="submit" value="Subscribe">
+          </form>
+
+        </div> -->
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="copyright">
+      &copy; Copyright <strong><span>Altos Technologies</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+
+    </div>
+  </div>
+</footer><!-- End Footer -->
+
+<!-- <div id="preloader"></div> -->
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+    class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="{% static 'vendor/purecounter/purecounter_vanilla.js' %}"></script>
+<script src="{% static 'vendor/aos/aos.js' %}"></script>
+<script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+<script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+<script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+<script src="{% static 'vendor/php-enquiry-form/validate.js' %}"></script>
+
+<!-- ionicons link-->
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<!-- Template Main JS File -->
+<script src="{% static 'js/main.js' %}"></script>
+
+<script>
+  $(function () {
+    setTimeout(function () { $("#successMessage").fadeOut(1500); }, 3000)
+
+  })
+</script>
+
+<script>
+  $(function () {
+    setTimeout(function () { $("#job_success").fadeOut(1500); }, 3000)
+
+  })
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3RLTXDEGMP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-3RLTXDEGMP');
+</script>
+
+</body>
+
+</html>

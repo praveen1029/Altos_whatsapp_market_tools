@@ -1,0 +1,489 @@
+{% extends 'base.html' %}
+{% load static %}
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+{% block body %}
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=EB+Garamond&family=Heebo:wght@600;700&family=Josefin+Sans:wght@300;500&family=Montserrat:wght@100;200;300;400&family=Mulish:wght@200&family=Poppins:wght@200;300&family=Raleway:wght@200&family=Roboto+Condensed:wght@300;400;700&family=Roboto+Mono:wght@100;300&family=Sofia+Sans:wght@100;200&family=Source+Sans+Pro:wght@200;300;600&family=Work+Sans:wght@200&display=swap');
+</style>
+<style>
+  #navbar .abot{
+    color: #ff3939;
+    font-weight: 800;
+ 
+  }
+  .container-fluid  
+  {
+      margin: 0;
+      padding: 0;
+      background: url("static/img/bg1.gif") top center;
+      background-size:fill;
+      position: relative; 
+   
+  }
+  .counts .image {
+    background: url('static/img/3.jpg')  no-repeat;
+    background-size: cover;
+    
+  }
+  @media(max-width:832px)
+  {
+  
+    .container-fluid
+    {
+      background-size: auto;
+    }
+  }
+   section h1{
+    font-size: 2.5em;
+   }
+   #about-us section
+   {
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    background:#00000099;
+   padding-top: 10em;
+   
+    
+   
+   }
+ 
+   #about-us h3{
+    font-size: 22px;
+    font-weight: 600;
+    font-family: Mulish;
+    line-height: 1.7em;
+    letter-spacing: 0.05em;
+    margin-bottom: 1em;
+   }
+   
+   #about-us  .fst-normal
+   {
+   
+    line-height: 1.8em;
+   
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:0.91.5em !important;
+    color: rgb(232, 234, 235);
+    padding: 0.01em 1.4em;
+   }
+   #about_box .container h4{
+    font-weight: 900;
+    color: #f3f3f3;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.40em;
+    margin-bottom: 1em;
+   }
+   ion-icon {
+    font-size: 36px;
+  }
+  .counts .content .count-box p
+  {
+   padding: 1em 0em;
+    margin:0px;
+  }
+  #counts .sub-head
+  {
+    margin-top: 1em;
+    font-size: 0.95em;
+  }
+  
+   @media(max-width:832px)
+   {
+    #about-us section
+    {
+     
+    padding-top: 6.5em;
+    }
+    #about-us  .container h4{
+    
+     font-weight: 1000;
+     text-align: center;
+     }
+     #about-us .fst-normal
+     {
+     text-align: start;
+      font-size: 0.91.5em !important;
+      color: #c7c7c7;
+      font-weight: 500;
+      
+      letter-spacing: 0.03em;
+
+     }
+     #about-us section
+     {
+      height: auto;
+     
+     }
+     .counts .content .count-box
+     {
+      text-align: center;
+      padding-top: 30px;
+     }
+     .counts .content .count-box p
+     {
+      padding: 3px 0px;
+       margin:0px;
+     }
+     ion-icon {
+      font-size: 32px;
+    }
+     
+   
+   }
+   #counts  p{
+    color: #c5c6c6;
+   }
+   
+</style>
+
+<style>
+  .mob{
+    margin-top: -20rem;
+    margin-right: -2rem;
+  }
+  .top_tree_effect{
+    margin-top: -1.7rem;
+  }
+  .top_light_effect{
+    margin-top: 4.1rem;
+  }
+  @media screen and (max-width:280px){
+    .top_tree_effect{
+      margin-top: -1.5rem;
+    }
+    .top_light_effect{
+      margin-top: 2rem;
+    }
+    .card_xmas{
+      margin-top: 3rem;
+    }
+    #img_card_hover{
+      visibility: hidden;
+    }
+  }
+  @media screen and (max-width:250px)
+  {  
+    .tree{
+      width: 5rem;
+    }
+    .mob{
+      margin-top: -20rem;
+      margin-right: -2rem;
+    }
+  }
+  /* xmas card */
+  .card_xmas{
+    background-image: url("{% static '/xmas/cards/card1.png' %}");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: auto;
+    text-shadow: 3px 3px 3px black;
+    border-radius: 10px;
+    transition: all 0.2s linear;
+  }
+  .ts{
+    text-shadow: 1px 1px 1px black;
+  }
+  .ts_md_light{
+    text-shadow: 3px 3px 3px white;
+  }
+  .ts_md_light{
+    text-shadow: 3px 3px 3px black;
+  }
+  #img_card_hover{
+    transition: all 0.2s linear;
+  }
+  #xmas_cap{
+    width: 7rem;
+  }
+  .xmas_cap_top{
+    margin-left: 27.5rem;
+    margin-top: 1.5rem;
+    transform: rotate(10deg);
+  }
+  #user_exp{
+    background-image: url('{% static "xmas/cards/card_bag_1.jpg" %}');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #xmas_santa_gif{
+    transform: rotate(-10deg);
+    width: 15rem;
+    margin-top: -15rem;
+  }
+  .xmas_santa_git_top{
+    transform: rotate(10deg);
+    margin-left: 5rem;
+  }
+  #xmas_bell_top{
+    width: 5rem;
+  }
+  .xmas_silk_gif{
+    margin-top: 3rem;
+    margin-left: 2rem;
+    transform: rotate(-35deg);
+  }
+  #xmas_star_gif{
+    width: 15rem;
+  }
+  .xmas_star_gif_top{
+    margin-top: -1.8rem;
+    margin-right: 10rem;
+  }
+  #xmas_bell{
+    width: 5rem;
+  }
+  .xmas_bell_top{
+    /* background-image: url("{% static 'xmas/decor/xmas_ball.png' %}"); */
+    margin-top: -1rem;
+    margin-left: 1rem;
+    /* width: 100%;
+    height: 100%; */
+    /* background-repeat: no-repeat;
+    background-size: contain; */
+  }
+
+  #ribbon_size{
+    width: 20rem;
+  }
+
+  @media screen and (max-width:540px){
+    #xmas_star_gif{
+      width: 5rem;
+    }
+    .xmas_star_gif_top{
+      margin-top: -1.8rem;
+      margin-right: 0.5rem;
+    }
+  }
+  @media screen and (min-width:541px)and (max-width:912px){
+    #xmas_star_gif{
+      width: 15rem;
+    }
+    .xmas_star_gif_top{
+      margin-top: -1.8rem;
+      margin-right: 0.5rem;
+    }
+  }
+</style>
+
+  <main id="main">
+    <div class="container-fluid" id="about-us">
+        <section id="about_box">
+          <div class="container" >
+            <div class="row">
+
+              <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute end-0 xmas_star_gif_top">
+                  <img id="xmas_star_gif" draggable="false" src="{% static 'xmas/gifs/star.gif' %}" alt="">
+               </div>
+               </div>
+
+              <div class="col-lg-5 col-sm-12 col-md-8 mt-5 mb-5">
+                <h4>About Us</h4>
+
+                  <div class="position-relative">
+                        <p class="fst-normal" data-aos="fade-left"
+                        data-aos-duration="2000">
+                        As a leading web development company in Kochi, ALTOS Technologies 
+                        provides top-notch consulting and strategy services to enhance the 
+                        digital transformation of enterprises of all sizes, both internally 
+                        and in terms of customer experience.
+                      </p>
+                      
+                      <div class="position-absolute end-0 top-0" style="margin-right: -1.5rem;margin-top: -3.8rem;">
+                        <img id="ribbon_size" draggable="false" src="{% static 'xmas/decor/new_ribbons/cross_ribbon_top_mirror.png' %}" alt="">
+                      </div>
+                      <div class="position-absolute start-0 top-0" style="margin-left: -2.1rem;margin-top: -3.8rem;">
+                        <img id="ribbon_size" draggable="false" src="{% static 'xmas/decor/new_ribbons/cross_ribbon_top.png' %}" alt="">
+                      </div>
+
+                      <div class="position-absolute start-0 bottom-0" style="margin-left: -2.1rem;margin-bottom: -3.8rem;">
+                        <img id="ribbon_size" draggable="false" src="{% static 'xmas/decor/new_ribbons/cross_ribbon_bottom_mirror.png' %}" alt="">
+                      </div>
+                      <div class="position-absolute end-0 bottom-0" style="margin-right: -1.5rem;margin-bottom: -3.8rem;">
+                        <img id="ribbon_size" draggable="false" src="{% static 'xmas/decor/new_ribbons/cross_ribbon_bottom.png' %}" alt="">
+                      </div>
+                      
+                  </div>
+                 
+                 
+              </div>
+              <div class="col-lg-5 col-sm-12 col-md-8"></div>
+              <div class="col-lg-7 col-sm-12 col-md-8"></div>
+              
+              <div class="col-lg-4 col-sm-12 col-md-8 mt-5 mb-5">
+
+                <div class="position-relative">
+                  <p class="fst-normal" data-aos="fade-up"
+                  data-aos-duration="2000">
+                  Our expertise lies in website and software development, 
+                  where we have gained extensive experience by delivering a 
+                  wide range of projects, including websites, web applications, 
+                  mobile applications, 3D modeling services, and digital marketing 
+                  services, to clients across different industries and of varying sizes.
+                  </p>
+                  <div class="position-absolute start-0 top-0" style="margin-left: -2.5rem;margin-top: -3.5rem;">
+                    <img id="ribbon_size" draggable="false" src="{% static 'xmas/decor/new_ribbons/cross_ribbon_top.png' %}" alt="">
+                  </div>
+                  <div class="position-absolute end-0 top-0" style="margin-right: -2.5rem;margin-top: -3.5rem;">
+                    <img id="ribbon_size" draggable="false" src="{% static 'xmas/decor/new_ribbons/cross_ribbon_top_mirror.png' %}" alt="">
+                  </div>
+                  <div class="position-absolute start-0 bottom-0" style="margin-left: -2.5rem;margin-bottom: -3.5rem;">
+                    <img id="ribbon_size" draggable="false" src="{% static 'xmas/decor/new_ribbons/cross_ribbon_bottom_mirror.png' %}" alt="">
+                  </div>
+                  <div class="position-absolute end-0 bottom-0" style="margin-right: -2.5rem;margin-bottom: -3.5rem;">
+                    <img id="ribbon_size" draggable="false" src="{% static 'xmas/decor/new_ribbons/cross_ribbon_bottom.png' %}" alt="">
+                  </div>
+                </div>
+
+              </div>
+              <div class="col-lg-2 col-sm-12 col-md-8"></div>
+              <div class="col-lg-4 col-sm-12 col-md-8 mt-5 mb-5">
+
+               <div class="position-relative">
+                  <p class="fst-normal" data-aos="fade-right"
+                  data-aos-duration="2000">
+                  At ALTOS Technologies, we understand the critical role that user 
+                  experience plays in the success of your website or software. That's 
+                  why we put a strong emphasis on designing and developing products 
+                  that are user-friendly, intuitive, and enjoyable to use, ensuring 
+                  your customers or employees have a seamless experience.
+                  </p>
+
+                  <div class="position-absolute start-0 top-0" style="margin-left: -2.5rem;margin-top: -3.5rem;">
+                    <img id="ribbon_size" draggable="false" src="{% static 'xmas/decor/new_ribbons/cross_ribbon_top.png' %}" alt="">
+                  </div>
+                  <div class="position-absolute end-0 top-0" style="margin-right: -2.5rem;margin-top: -3.5rem;">
+                    <img id="ribbon_size" draggable="false" src="{% static 'xmas/decor/new_ribbons/cross_ribbon_top_mirror.png' %}" alt="">
+                  </div>
+
+                  <div class="position-absolute start-0 bottom-0" style="margin-left: -2.5rem;margin-bottom: -3.5rem;">
+                    <img id="ribbon_size" draggable="false" src="{% static 'xmas/decor/new_ribbons/cross_ribbon_bottom_mirror.png' %}" alt="">
+                  </div>
+                  <div class="position-absolute end-0 bottom-0" style="margin-right: -2.5rem;margin-bottom: -3.5rem;">
+                    <img id="ribbon_size" draggable="false" src="{% static 'xmas/decor/new_ribbons/cross_ribbon_bottom.png' %}" alt="">
+                  </div>
+
+                </div>
+               </div>
+           
+              </div>
+            </div>
+                   
+         
+          </div>
+        </section>
+      </div>
+
+          <!-- ======= Counts Section ======= -->
+
+    
+          <div class="position-relative" style="z-index: 1;">
+            <div class="position-absolute">
+              <div class="d-flex">
+                <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+                <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+                <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+                <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+                <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+                <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+                <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+                <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+                <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+                <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+                <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+                <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+                <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+                <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+                <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+                <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+                <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+                <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+                <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+                <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+                <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+                <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+                <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+                <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+                <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+                
+              </div>
+            </div>
+          </div>
+          
+   <section id="counts" class="counts" style="background: #151515;">
+
+    <div class="container pt-5" data-aos="fade-up">
+      <div class="row no-gutters p-3">
+        <div class="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-lg-start" data-aos="fade-right" data-aos-delay="100"></div>
+        <div class="col-xl-7 ps-0 ps-lg-5 pe-lg-1 d-flex align-items-stretch" data-aos="fade-left" data-aos-delay="100">
+          <div class="content d-flex flex-column justify-content-center">
+            <h4 style="color: rgb(243, 243, 243);">//Why Choose Us</h4>
+              <h3 style="color: #ffff;">Some Of The Reason For Choosing 
+              <span style="color: #0fa49b;">Our  IT Solutions</span></h3>
+            <p class="sub-head">
+              Discover why ALTOS Technologies is the premier choice for IT solutions 
+            </p>
+            <div class="row">
+              <div class="col-md-6 d-md-flex align-items-md-stretch">
+                <div class="count-box">
+                  <ion-icon name="happy-outline" style="color: #0fa49b;"></ion-icon>
+                  <p><strong> 	Experienced Professionals</strong>
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6 d-md-flex align-items-md-stretch ">
+                <div class="count-box">
+                  <ion-icon name="layers-outline"  style="color: #0fa49b;"></ion-icon>
+               
+                  <p><strong>Unique Designs</strong></p>
+                </div>
+              </div>
+              <div class="col-md-6 d-md-flex align-items-md-stretch">
+                <div class="count-box">
+                  <ion-icon name="hourglass-outline" style="color: #0fa49b;"></ion-icon>
+                  
+                  <p><strong>On-time Delivery</strong> </p>
+                </div>
+              </div>
+               <div class="col-md-6 d-md-flex align-items-md-stretch">
+                <div class="count-box">
+                  <ion-icon name="people-outline" style="color: #0fa49b;"> </ion-icon>
+                  <p><strong>Customized Services</strong>  </p>
+                </div>
+              </div> 
+              <div class="col-md-6 d-md-flex align-items-md-stretch">
+                <div class="count-box">
+              
+                  <ion-icon name="receipt-outline" style="color: #0fa49b;"></ion-icon>
+                  <span data-purecounter-start="0" data-purecounter-end="20" data-purecounter-duration="4" class="purecounter"></span>
+                  <p><strong>Faster Responses</strong>  </p>
+                </div>
+              </div> 
+              <div class="col-md-6 d-md-flex align-items-md-stretch">
+                <div class="count-box">
+                  <ion-icon name="headset-outline"  style="color: #0fa49b;"></ion-icon>
+                 
+                  <p><strong>Dedicated Client Support</strong> </p>
+                </div>
+              </div> 
+            </div>
+          </div> 
+        </div>
+      </div>
+    </div>
+  </section>  
+  <!-- End Counts Section -->
+
+</main>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
+{% endblock %}
