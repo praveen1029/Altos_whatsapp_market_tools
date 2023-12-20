@@ -8,11 +8,11 @@
 </style>
 <style>
   #navbar .abot{
-    color: #ff3939;
+    color: #189aa6;
     font-weight: 800;
  
   }
-  .container-fluid  
+  .container-fluid
   {
       margin: 0;
       padding: 0;
@@ -139,237 +139,51 @@
    
 </style>
 
-<style>
-  .mob{
-    margin-top: -20rem;
-    margin-right: -2rem;
-  }
-  .top_tree_effect{
-    margin-top: -1.7rem;
-  }
-  .top_light_effect{
-    margin-top: 4.1rem;
-  }
-  @media screen and (max-width:280px){
-    .top_tree_effect{
-      margin-top: -1.5rem;
-    }
-    .top_light_effect{
-      margin-top: 2rem;
-    }
-    .card_xmas{
-      margin-top: 3rem;
-    }
-    #img_card_hover{
-      visibility: hidden;
-    }
-  }
-  @media screen and (max-width:250px)
-  {  
-    .tree{
-      width: 5rem;
-    }
-    .mob{
-      margin-top: -20rem;
-      margin-right: -2rem;
-    }
-  }
-  /* xmas card */
-  .card_xmas{
-    background-image: url("{% static '/xmas/cards/card1.png' %}");
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: auto;
-    text-shadow: 3px 3px 3px black;
-    border-radius: 10px;
-    transition: all 0.2s linear;
-  }
-  .ts{
-    text-shadow: 1px 1px 1px black;
-  }
-  .ts_md_light{
-    text-shadow: 3px 3px 3px white;
-  }
-  .ts_md_light{
-    text-shadow: 3px 3px 3px black;
-  }
-  #img_card_hover{
-    transition: all 0.2s linear;
-  }
-  #xmas_cap{
-    width: 7rem;
-  }
-  .xmas_cap_top{
-    margin-left: 27.5rem;
-    margin-top: 1.5rem;
-    transform: rotate(10deg);
-  }
-  #user_exp{
-    background-image: url('{% static "xmas/cards/card_bag_1.jpg" %}');
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  #xmas_santa_gif{
-    transform: rotate(-10deg);
-    width: 15rem;
-    margin-top: -15rem;
-  }
-  .xmas_santa_git_top{
-    transform: rotate(10deg);
-    margin-left: 5rem;
-  }
-  #xmas_bell_top{
-    width: 5rem;
-  }
-  .xmas_silk_gif{
-    margin-top: 3rem;
-    margin-left: 2rem;
-    transform: rotate(-35deg);
-  }
-  #xmas_star_gif{
-    width: 15rem;
-  }
-  .xmas_star_gif_top{
-    margin-top: -1.8rem;
-    margin-right: 10rem;
-  }
-  #xmas_bell{
-    width: 5rem;
-  }
-  .xmas_bell_top{
-    /* background-image: url("{% static 'xmas/decor/xmas_ball.png' %}"); */
-    margin-top: -1rem;
-    margin-left: 1rem;
-    /* width: 100%;
-    height: 100%; */
-    /* background-repeat: no-repeat;
-    background-size: contain; */
-  }
-
-  #ribbon_size{
-    width: 20rem;
-  }
-
-  @media screen and (max-width:540px){
-    #xmas_star_gif{
-      width: 5rem;
-    }
-    .xmas_star_gif_top{
-      margin-top: -1.8rem;
-      margin-right: 0.5rem;
-    }
-  }
-  @media screen and (min-width:541px)and (max-width:912px){
-    #xmas_star_gif{
-      width: 15rem;
-    }
-    .xmas_star_gif_top{
-      margin-top: -1.8rem;
-      margin-right: 0.5rem;
-    }
-  }
-</style>
 
   <main id="main">
+   
     <div class="container-fluid" id="about-us">
         <section id="about_box">
           <div class="container" >
             <div class="row">
-
-              <div class="position-relative" style="z-index: 1;">
-                <div class="position-absolute end-0 xmas_star_gif_top">
-                  <img id="xmas_star_gif" draggable="false" src="{% static 'xmas/gifs/star.gif' %}" alt="">
-               </div>
-               </div>
-
-              <div class="col-lg-5 col-sm-12 col-md-8 mt-5 mb-5">
+              <div class="col-lg-5 col-sm-12 col-md-8">
                 <h4>About Us</h4>
+               
 
-                  <div class="position-relative">
-                        <p class="fst-normal" data-aos="fade-left"
-                        data-aos-duration="2000">
-                        As a leading web development company in Kochi, ALTOS Technologies 
-                        provides top-notch consulting and strategy services to enhance the 
-                        digital transformation of enterprises of all sizes, both internally 
-                        and in terms of customer experience.
-                      </p>
-                      
-                      <div class="position-absolute end-0 top-0" style="margin-right: -1.5rem;margin-top: -3.8rem;">
-                        <img id="ribbon_size" draggable="false" src="{% static 'xmas/decor/new_ribbons/cross_ribbon_top_mirror.png' %}" alt="">
-                      </div>
-                      <div class="position-absolute start-0 top-0" style="margin-left: -2.1rem;margin-top: -3.8rem;">
-                        <img id="ribbon_size" draggable="false" src="{% static 'xmas/decor/new_ribbons/cross_ribbon_top.png' %}" alt="">
-                      </div>
-
-                      <div class="position-absolute start-0 bottom-0" style="margin-left: -2.1rem;margin-bottom: -3.8rem;">
-                        <img id="ribbon_size" draggable="false" src="{% static 'xmas/decor/new_ribbons/cross_ribbon_bottom_mirror.png' %}" alt="">
-                      </div>
-                      <div class="position-absolute end-0 bottom-0" style="margin-right: -1.5rem;margin-bottom: -3.8rem;">
-                        <img id="ribbon_size" draggable="false" src="{% static 'xmas/decor/new_ribbons/cross_ribbon_bottom.png' %}" alt="">
-                      </div>
-                      
-                  </div>
+                  <p class="fst-normal" data-aos="fade-left"
+                  data-aos-duration="2000">
+                  As a leading web development company in Kochi, ALTOS Technologies 
+                  provides top-notch consulting and strategy services to enhance the 
+                  digital transformation of enterprises of all sizes, both internally 
+                  and in terms of customer experience.
+                  </p>
                  
                  
               </div>
               <div class="col-lg-5 col-sm-12 col-md-8"></div>
               <div class="col-lg-7 col-sm-12 col-md-8"></div>
-              
-              <div class="col-lg-4 col-sm-12 col-md-8 mt-5 mb-5">
-
-                <div class="position-relative">
-                  <p class="fst-normal" data-aos="fade-up"
-                  data-aos-duration="2000">
-                  Our expertise lies in website and software development, 
-                  where we have gained extensive experience by delivering a 
-                  wide range of projects, including websites, web applications, 
-                  mobile applications, 3D modeling services, and digital marketing 
-                  services, to clients across different industries and of varying sizes.
-                  </p>
-                  <div class="position-absolute start-0 top-0" style="margin-left: -2.5rem;margin-top: -3.5rem;">
-                    <img id="ribbon_size" draggable="false" src="{% static 'xmas/decor/new_ribbons/cross_ribbon_top.png' %}" alt="">
-                  </div>
-                  <div class="position-absolute end-0 top-0" style="margin-right: -2.5rem;margin-top: -3.5rem;">
-                    <img id="ribbon_size" draggable="false" src="{% static 'xmas/decor/new_ribbons/cross_ribbon_top_mirror.png' %}" alt="">
-                  </div>
-                  <div class="position-absolute start-0 bottom-0" style="margin-left: -2.5rem;margin-bottom: -3.5rem;">
-                    <img id="ribbon_size" draggable="false" src="{% static 'xmas/decor/new_ribbons/cross_ribbon_bottom_mirror.png' %}" alt="">
-                  </div>
-                  <div class="position-absolute end-0 bottom-0" style="margin-right: -2.5rem;margin-bottom: -3.5rem;">
-                    <img id="ribbon_size" draggable="false" src="{% static 'xmas/decor/new_ribbons/cross_ribbon_bottom.png' %}" alt="">
-                  </div>
-                </div>
-
+              <div class="col-lg-4 col-sm-12 col-md-8">
+                <p class="fst-normal" data-aos="fade-up"
+                data-aos-duration="2000">
+                Our expertise lies in website and software development, 
+                where we have gained extensive experience by delivering a 
+                wide range of projects, including websites, web applications, 
+                mobile applications, 3D modeling services, and digital marketing 
+                services, to clients across different industries and of varying sizes.
+                
+                </p>
               </div>
               <div class="col-lg-2 col-sm-12 col-md-8"></div>
-              <div class="col-lg-4 col-sm-12 col-md-8 mt-5 mb-5">
+              <div class="col-lg-4 col-sm-12 col-md-8">
+                <p class="fst-normal" data-aos="fade-right"
+                data-aos-duration="2000">
+                At ALTOS Technologies, we understand the critical role that user 
+                experience plays in the success of your website or software. That's 
+                why we put a strong emphasis on designing and developing products 
+                that are user-friendly, intuitive, and enjoyable to use, ensuring 
+                your customers or employees have a seamless experience.
 
-               <div class="position-relative">
-                  <p class="fst-normal" data-aos="fade-right"
-                  data-aos-duration="2000">
-                  At ALTOS Technologies, we understand the critical role that user 
-                  experience plays in the success of your website or software. That's 
-                  why we put a strong emphasis on designing and developing products 
-                  that are user-friendly, intuitive, and enjoyable to use, ensuring 
-                  your customers or employees have a seamless experience.
-                  </p>
-
-                  <div class="position-absolute start-0 top-0" style="margin-left: -2.5rem;margin-top: -3.5rem;">
-                    <img id="ribbon_size" draggable="false" src="{% static 'xmas/decor/new_ribbons/cross_ribbon_top.png' %}" alt="">
-                  </div>
-                  <div class="position-absolute end-0 top-0" style="margin-right: -2.5rem;margin-top: -3.5rem;">
-                    <img id="ribbon_size" draggable="false" src="{% static 'xmas/decor/new_ribbons/cross_ribbon_top_mirror.png' %}" alt="">
-                  </div>
-
-                  <div class="position-absolute start-0 bottom-0" style="margin-left: -2.5rem;margin-bottom: -3.5rem;">
-                    <img id="ribbon_size" draggable="false" src="{% static 'xmas/decor/new_ribbons/cross_ribbon_bottom_mirror.png' %}" alt="">
-                  </div>
-                  <div class="position-absolute end-0 bottom-0" style="margin-right: -2.5rem;margin-bottom: -3.5rem;">
-                    <img id="ribbon_size" draggable="false" src="{% static 'xmas/decor/new_ribbons/cross_ribbon_bottom.png' %}" alt="">
-                  </div>
-
-                </div>
-               </div>
+                </p>
            
               </div>
             </div>
@@ -380,44 +194,8 @@
       </div>
 
           <!-- ======= Counts Section ======= -->
-
-    
-          <div class="position-relative" style="z-index: 1;">
-            <div class="position-absolute">
-              <div class="d-flex">
-                <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
-                <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
-                <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
-                <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
-                <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
-                <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
-                <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
-                <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
-                <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
-                <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
-                <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
-                <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
-                <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
-                <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
-                <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
-                <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
-                <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
-                <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
-                <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
-                <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
-                <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
-                <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
-                <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
-                <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
-                <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
-                
-              </div>
-            </div>
-          </div>
-          
    <section id="counts" class="counts" style="background: #151515;">
-
-    <div class="container pt-5" data-aos="fade-up">
+    <div class="container" data-aos="fade-up">
       <div class="row no-gutters p-3">
         <div class="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-lg-start" data-aos="fade-right" data-aos-delay="100"></div>
         <div class="col-xl-7 ps-0 ps-lg-5 pe-lg-1 d-flex align-items-stretch" data-aos="fade-left" data-aos-delay="100">
