@@ -5,13 +5,6 @@
 {% load static %}
 
 <head>
-    <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-PPX9VQQH');</script>
-<!-- End GoogleTagManage-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
@@ -33,7 +26,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="canonical" href="https://altostechnologies.in/core.html">
 
 <meta name="google-site-verification" content="LoY-CVPuvtWVxYhyHkd4SRk0wuvxUq9279OLySrjqdc"/>
-<meta name="msvalidate.01" content="F7712C338CE3604FDD8BF76FC23584A5"/>
+
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <!-- Favicons -->
@@ -56,7 +49,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link href="{% static 'css/style.css' %}" rel="stylesheet">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-238910742-1"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-238910742-1"></script>
+
+  <!-- xmas Theme -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <link rel="stylesheet" href="{% static 'css/xmas.css' %}">
+  <script src="{% static 'js/xmas.js' %}"></script>
+
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -87,15 +86,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
   </style>
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3RLTXDEGMP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-3RLTXDEGMP');
-</script>
 
 <style>
 
@@ -201,7 +192,7 @@ h5 {
     overflow: hidden;
     top: 0;
     right: 0;
-    background-color: #00838d;
+    background-color: #8d0000;
     border-radius: 0 4px 0 32px;
   }
   
@@ -232,7 +223,7 @@ h5 {
       z-index: -1;
       top: -16px;
       right: -16px;
-      background: #00838d;
+      background: #ce4545;
       height: 32px;
       width: 32px;
       transform: scale(1);
@@ -252,6 +243,17 @@ h5 {
     .card1:hover h5 {
       transition: all 0.3s ease-out;
       color: #ffffff;
+    }
+
+    .card1:hover .go-arrow {
+      color: black;
+      transition: all 0.3s ease-out;
+    }
+
+    .card1:hover .go-corner {
+      background-color: white;
+      box-shadow: 3px 3px 3px 3px black;
+      transition: all 0.3s ease-out;
     }
 
     .core-info 
@@ -442,33 +444,210 @@ h5 {
       font-size: 1em;
       padding: 1em;
       /* background: #29d5e5c9; */
-      background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(55,237,226,1) 0%, rgba(21,244,233,1) 0%, rgba(20,172,166,1) 35%, rgba(70,110,119,1) 100%);
+      background: linear-gradient(
+          45deg,
+          #840000,
+          rgb(187, 0, 0),
+          #5c0404 100%
+          );
       font-weight: 600;
       text-transform: uppercase;
       border: none;
       border-radius: 4px;
     }
 </style>
+<style>
+  .mob{
+    margin-top: -20rem;
+    margin-right: -2rem;
+  }
+  .top_tree_effect{
+    margin-top: -1.7rem;
+  }
+  .top_light_effect{
+    margin-top: 4.1rem;
+  }
+  @media screen and (max-width:280px){
+    .top_tree_effect{
+      margin-top: -1.5rem;
+    }
+    .top_light_effect{
+      margin-top: 2rem;
+    }
+    .card_xmas{
+      margin-top: 3rem;
+    }
+    #img_card_hover{
+      visibility: hidden;
+    }
+  }
+  @media screen and (max-width:250px)
+  {  
+    .tree{
+      width: 5rem;
+    }
+    .mob{
+      margin-top: -20rem;
+      margin-right: -2rem;
+    }
+  }
+  /* xmas card */
+  .card_xmas{
+    background-image: url("{% static '/xmas/cards/card1.png' %}");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: auto;
+    text-shadow: 3px 3px 3px black;
+    border-radius: 10px;
+    transition: all 0.2s linear;
+  }
+  .ts{
+    text-shadow: 1px 1px 1px black;
+  }
+  .ts_md_light{
+    text-shadow: 3px 3px 3px white;
+  }
+  .ts_md_light{
+    text-shadow: 3px 3px 3px black;
+  }
+  #img_card_hover{
+    transition: all 0.2s linear;
+  }
+  #xmas_cap{
+    width: 7rem;
+  }
+  .xmas_cap_top{
+    margin-left: 27.5rem;
+    margin-top: 1.5rem;
+    transform: rotate(10deg);
+  }
+  #user_exp{
+    background-image: url('{% static "xmas/cards/card_bag_1.jpg" %}');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #xmas_santa_gif{
+    transform: rotate(-10deg);
+    width: 15rem;
+    margin-top: -15rem;
+  }
+  .xmas_santa_git_top{
+    transform: rotate(10deg);
+    margin-left: 5rem;
+  }
+  #xmas_bell_top{
+    width: 5rem;
+  }
+  .xmas_silk_gif{
+    margin-top: 3rem;
+    margin-left: 2rem;
+    transform: rotate(-35deg);
+  }
+  .xmas_star_gif_top{
+    margin-top: -4rem;
+    margin-right: 8rem;
+  }
+  #xmas_star_gif{
+    width: 15rem;
+  }
+  #xmas_bell{
+    width: 5rem;
+  }
+  .xmas_bell_top{
+    /* background-image: url("{% static 'xmas/decor/xmas_ball.png' %}"); */
+    margin-top: -1rem;
+    margin-left: 1rem;
+    /* width: 100%;
+    height: 100%; */
+    /* background-repeat: no-repeat;
+    background-size: contain; */
+  }
+  .xmas_text{
+    color: white;
+    text-shadow: 3px 3px 10px rgba(255, 0, 0, 0.797);
+  }
+  .background_img{
+    background-image: url('{% static "xmas/bg/card_bg1.png" %}');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .background_img1{
+    /* background-image: radial-gradient(white,rgba(255, 255, 255, 0.531),rgba(255, 255, 255, 0),rgba(0, 0, 0, 0.245)); */
+  }
+  #santa_peek11{
+    width: 10rem;
+  }
+  .santa_peek11_top{
+    margin-left: -6.5rem;
+    margin-top: 6rem;
+  }
+  #santa_peek22{
+    width: 10rem;
+  }
+  .santa_peek22_top{
+    margin-right: -6.5rem;
+    margin-top: 7.5rem;
+  }
+  #snowman_peek11{
+    width: 7rem;
+  }
+  .snowman_peek11_top{
+    margin-left: -8rem;
+    margin-top: 5rem;
+  }
+  #snowman_peek22{
+    width: 7rem;
+  }
+  .snowman_peek22_top{
+    margin-right: -8rem;
+    margin-top: 5rem;
+  }
+</style>
+<body>
+  
+  <div class="position-relative" style="z-index: 1;">
+    <div class="position-absolute" style="width: 100%;height: 100%;">
+      <div class="snow-container"></div>
+    </div>
+  </div>
 
  <!-- ======= Header ======= -->
- <header id="header" class="fixed-top green-blue">
+ <header id="header" class="fixed-top green-blue" style="padding-top: 1.5rem;background-color: rgba(0, 0, 0, 0.425);">
+  <div class="position-relative" style="z-index: 1;">
+    <div class="position-absolute start-0 top-0 top_tree_effect">
+      <div class="d-flex">
+        <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+        <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+        <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+        <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+        <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+        <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+        <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+        <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+        <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+        <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+        <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+        <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+      </div>
+    </div>
+  </div>
   <div class="container d-flex align-items-center justify-content-lg-between">
 
     <h1 class="logo me-auto me-lg-0">
       <a href="{% url 'text_page' %}">
         <!-- <video src="static/img/logo.mp4"></video> -->
-        <img src="{% static 'img/lg1.gif' %}" class="" alt="Logo Gif">
+        <img src="{% static 'img/lg2.gif' %}" class="" alt="Logo Gif">
       
       </a>
     </h1> 
    
 
-    <nav id="navbar" class="navbar order-last order-lg-0">
+    <nav id="navbar" class="navbar order-last order-lg-0" style="z-index: 10;">
       <ul>
         <li><a class="nav-link scrollto hom " href="{% url 'text_page' %}">Home</a></li>
         <li><a class="nav-link scrollto abot" href="{% url 'aboutus' %}">About us</a></li>
         <li><a class="nav-link scrollto serv" href="{% url 'service' %}">Services</a></li>
-        <li><a class="nav-link scrollto  cor " href="{% url 'core' %}">Product</a></li>
+        <li><a style="color: #ff3939;" class="nav-link scrollto  cor " href="{% url 'core' %}">Product</a></li>
         <li><a class="nav-link scrollto  cors " href="{% url 'vacancy' %}">Career</a></li>
         
         <li><a class="nav-link scrollto event" href="{% url 'events' %}">Events</a></li>
@@ -488,10 +667,22 @@ h5 {
   <section class="pb-0">
     <div class="container mt-3">
       <div class="row  g-3 content-boxs-parent border-0 rounded-4">
+        
+        <div class="position-relative" style="z-index: 1;">
+          <div class="position-absolute santa_peek11_top">
+            <img id="santa_peek11" draggable="false" src="{% static 'xmas/decor/xmaspap_peek.png' %}" alt="">
+        </div>
+        </div>
+
         <div class="col-lg-6 col-sm-12 col-md-6 px-3">
-          <div class="content-boxs border-0 rounded-4">
-            <h2>ERP </h2>
+          <div class="content-boxs border-0 rounded-4 background_img1">
+            <h2 class="xmas_text text-light">ERP </h2>
             <div class="img-box-tech image-hidden">
+              <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute" style="margin-top: -8rem;">
+                  <img draggable="false" src="{% static 'xmas/decor/lights/light2_full.png' %}" alt="">
+              </div>
+              </div>
               <img src="static/img/team/erp.png" alt="ERP" />
             </div>
           <p>Accounting, inventory management, customer relationship management, 
@@ -503,6 +694,11 @@ h5 {
         </div>
         <div class="col-lg-6 col-sm-12 col-md-6 px-4 d-flex align-items-center">
           <div class="img-box-tech image-visible">
+            <div class="position-relative" style="z-index: 1;">
+              <div class="position-absolute" style="margin-top: -8rem;">
+                <img draggable="false" src="{% static 'xmas/decor/lights/light2_full.png' %}" alt="">
+            </div>
+            </div>
             <!-- <h4 class="hide-head">ERP</h4> -->
             <img src="static/img/team/erp.png" alt="ERP" />
           </div>
@@ -531,7 +727,7 @@ h5 {
 
   <section class="pt-0">
     <div class="container mt-3">
-      <div class="row  g-3 content-boxs-parent border-0 rounded-4"">
+      <div class="row  g-3 content-boxs-parent border-0 rounded-4">
         <!-- <div class=" col-lg-6 col-sm-12 col-md-6">
           <div class="content-boxs">
             <h2>ERP </h2>
@@ -542,16 +738,35 @@ h5 {
           </div>
           
         </div> -->
+
+        <div class="position-relative" style="z-index: 1;">
+          <div class="position-absolute end-0 santa_peek22_top">
+            <img id="santa_peek22" draggable="false" src="{% static 'xmas/decor/xmaspap_peek_left.png' %}" alt="">
+        </div>
+        </div>
+
         <div class="col-lg-6 col-sm-12 col-md-6 px-4 d-flex align-items-center">
           <div class="img-box-tech image-visible">
             <!-- <h4 class="hide-head">CRM</h4> -->
+            <div class="position-relative" style="z-index: 1;">
+              <div class="position-absolute" style="margin-top: -8rem;">
+                <img draggable="false" src="{% static 'xmas/decor/lights/light2_full.png' %}" alt="">
+            </div>
+            </div>
             <img src="static/img/team/crm.png" alt="CRM" />
           </div>
         </div>
         <div class="col-lg-6 col-sm-12 col-md-6 px-3">
           <div class="content-boxs border-0 rounded-4">
-          <h2>CRM </h2>
+          <h2 class="xmas_text text-light">CRM </h2>
           <div class="img-box-tech image-hidden">
+
+            <div class="position-relative" style="z-index: 1;">
+              <div class="position-absolute" style="margin-top: -8rem;">
+                <img draggable="false" src="{% static 'xmas/decor/lights/light2_full.png' %}" alt="">
+            </div>
+            </div>
+
             <img src="static/img/team/crm.png" alt="CRM" />
           </div>
           <p>We recognise that each business is different and that commercial CRM 
@@ -672,6 +887,11 @@ h5 {
             </div>
           </div>
         </a>
+        <div class="position-relative" style="z-index: 1;">
+          <div class="position-absolute end-0 bottom-0" style="margin-bottom: -10rem;margin-right: 0.3rem;">
+            <img width="80rem" draggable="false" src="{% static 'xmas/decor/CARTOON_CHRISTMAS_TREE_1.png' %}" alt="">
+        </div>
+        </div>
         <a class="card1">
             <h5>Collaboration</h5>
             <p class="small">The goal of the collaboration module in CORE is to streamline workflows and processes by utilizing organizational 
@@ -683,6 +903,11 @@ h5 {
               </div>
             </div>
         </a>
+        <div class="position-relative" style="z-index: 1;">
+          <div class="position-absolute end-0 bottom-0" style="margin-bottom: -10rem;margin-right: 0.3rem;">
+            <img width="80rem" draggable="false" src="{% static 'xmas/decor/CARTOON_CHRISTMAS_TREE_1.png' %}" alt="">
+        </div>
+        </div>
         <a class="card1">
             <h5>Time Management</h5>
             <p class="small">It is crucial that you manage your time effectively to succeed in your business journey and 
@@ -694,6 +919,11 @@ h5 {
               </div>
             </div>
         </a>
+        <div class="position-relative" style="z-index: 1;">
+          <div class="position-absolute end-0 bottom-0" style="margin-bottom: -10rem;margin-right: 0.3rem;">
+            <img width="80rem" draggable="false" src="{% static 'xmas/decor/CARTOON_CHRISTMAS_TREE_1.png' %}" alt="">
+        </div>
+        </div>
         <a class="card1">
             <h5>File Management</h5>
             <p class="small">The business will be able to get rid of all their paperwork and have everything in one location, which may be very advantageous. 
@@ -704,7 +934,11 @@ h5 {
               </div>
             </div>
         </a>
-
+        <div class="position-relative" style="z-index: 1;">
+          <div class="position-absolute end-0 bottom-0" style="margin-bottom: -10rem;margin-right: 0.3rem;">
+            <img width="80rem" draggable="false" src="{% static 'xmas/decor/CARTOON_CHRISTMAS_TREE_1.png' %}" alt="">
+        </div>
+        </div>
         <a class="card1">
             <h5>Employee Management</h5>
             <p class="small">By using this system, the company and employees' professional and personal details are protected. HRs and business managers undergo less pressure and workload thanks to the employee management system. 
@@ -715,7 +949,11 @@ h5 {
               </div>
             </div>
         </a>
-
+        <div class="position-relative" style="z-index: 1;">
+          <div class="position-absolute end-0 bottom-0" style="margin-bottom: -10rem;margin-right: 0.3rem;">
+            <img width="80rem" draggable="false" src="{% static 'xmas/decor/CARTOON_CHRISTMAS_TREE_1.png' %}" alt="">
+        </div>
+        </div>
         <a class="card1">
             <h5>Finance Auditing </h5>
             <p class="small">By reducing gaps in data and removing processes that waste time and resources, a comprehensive CRM audit will enable you to take full advantage of your CRM. 
@@ -726,7 +964,11 @@ h5 {
               </div>
             </div>
         </a>
-
+        <div class="position-relative" style="z-index: 1;">
+          <div class="position-absolute end-0 bottom-0" style="margin-bottom: -10rem;margin-right: 0.3rem;">
+            <img width="80rem" draggable="false" src="{% static 'xmas/decor/CARTOON_CHRISTMAS_TREE_1.png' %}" alt="">
+        </div>
+        </div>
         <a class="card1">
             <h5>Payroll Management </h5>
             <p class="small">Payroll is also a crucial system to the operation of your company. Although it might be your largest expense, it is an essential process that must be completed accurately and on time. Besides disburses employees' 
@@ -737,7 +979,11 @@ h5 {
               </div>
             </div>
         </a>
-
+        <div class="position-relative" style="z-index: 1;">
+          <div class="position-absolute end-0 bottom-0" style="margin-bottom: -10rem;margin-right: 0.3rem;">
+            <img width="80rem" draggable="false" src="{% static 'xmas/decor/CARTOON_CHRISTMAS_TREE_1.png' %}" alt="">
+        </div>
+        </div>
         <a class="card1">
             <h5>Client Management </h5>
             <p class="small">The goal of every business is to develop a long-term relationship with its clients. It allows you to define time intervals, set a scale for transactions based on the quality 
@@ -748,7 +994,11 @@ h5 {
               </div>
             </div>
         </a>
-
+        <div class="position-relative" style="z-index: 1;">
+          <div class="position-absolute end-0 bottom-0" style="margin-bottom: -10rem;margin-right: 0.3rem;">
+            <img width="80rem" draggable="false" src="{% static 'xmas/decor/CARTOON_CHRISTMAS_TREE_1.png' %}" alt="">
+        </div>
+        </div>
         <a class="card1">
             <h5>Progress Tracking </h5>
             <p class="small">CRM software simplifies tracking and taking actions to solve any issues by integrating project details, product reports, and contacts for prospects and customers. It allows you to track progress of your employees, thereby identifying their 
@@ -759,6 +1009,11 @@ h5 {
               </div>
             </div>
         </a>
+        <div class="position-relative" style="z-index: 1;">
+          <div class="position-absolute end-0 bottom-0" style="margin-bottom: -10rem;margin-right: 0.3rem;">
+            <img width="80rem" draggable="false" src="{% static 'xmas/decor/CARTOON_CHRISTMAS_TREE_1.png' %}" alt="">
+        </div>
+        </div>
         <a class="card1">
             <h5>Reports and Analytics</h5>
             <p class="small">Providing in-depth details about sales, customer service, and marketing processes is the primary advantage of the Report and Analysis module. Using the CORE, you will be able to generate a custom report that shows profitability, 
@@ -769,6 +1024,11 @@ h5 {
               </div>
             </div>
         </a>
+        <div class="position-relative" style="z-index: 1;">
+          <div class="position-absolute end-0 bottom-0" style="margin-bottom: -10rem;margin-right: 0.3rem;">
+            <img width="80rem" draggable="false" src="{% static 'xmas/decor/CARTOON_CHRISTMAS_TREE_1.png' %}" alt="">
+        </div>
+        </div>
         <a class="card1">
             <h5>Easy Documentation </h5>
             <p class="small">Having access to the business data from anywhere within seconds transforms a business into a major player. The documentation of each transaction and 
@@ -779,6 +1039,11 @@ h5 {
               </div>
             </div>
         </a>
+        <div class="position-relative" style="z-index: 1;">
+          <div class="position-absolute end-0 bottom-0" style="margin-bottom: -10rem;margin-right: 0.3rem;">
+            <img width="80rem" draggable="false" src="{% static 'xmas/decor/CARTOON_CHRISTMAS_TREE_1.png' %}" alt="">
+        </div>
+        </div>
     </div>
  
 </section>
@@ -787,10 +1052,22 @@ h5 {
 <section class="pb-0">
   <div class="container mt-3">
     <div class="row  g-3 content-boxs-parent">
+
+      <div class="position-relative" style="z-index: 1;">
+        <div class="position-absolute snowman_peek11_top">
+          <img id="snowman_peek11" draggable="false" src="{% static 'xmas/decor/xams_snoman_peek_no_bg_mirror.png' %}" alt="">
+      </div>
+      </div>
+      
       <div class="col-lg-7 col-sm-12 col-md-7 px-1">
         <div class="content-boxs border-0 rounded-4">
-          <h2>HRMS  </h2>
+          <h2 class="xmas_text text-light">HRMS  </h2>
           <div class="img-box-tech image-hidden">
+            <div class="position-relative" style="z-index: 1;">
+              <div class="position-absolute" style="margin-top: -8rem;">
+                <img draggable="false" src="{% static 'xmas/decor/lights/light2_full.png' %}" alt="">
+            </div>
+            </div>
             <img src="static/img/team/hrms.png" alt="HRMS" />
           </div>
         <p>Our HRMS software includes modules for employee records management, benefits administration, 
@@ -817,6 +1094,11 @@ h5 {
       <div class="col-lg-5 col-sm-12 col-md-5 px-4 d-flex align-items-center">
         <div class="img-box-tech image-visible">
           <!-- <h4 class="hide-head">ERP</h4> -->
+          <div class="position-relative" style="z-index: 1;">
+            <div class="position-absolute" style="margin-top: -8rem;">
+              <img draggable="false" src="{% static 'xmas/decor/lights/light2_full.png' %}" alt="">
+          </div>
+          </div>
           <img src="static/img/team/hrms.png" alt="HRMS" />
         </div>
       </div>
@@ -899,16 +1181,33 @@ h5 {
         </div>
         
       </div> -->
+      
+      <div class="position-relative" style="z-index: 1;">
+        <div class="position-absolute end-0 snowman_peek22_top">
+          <img id="snowman_peek22" draggable="false" src="{% static 'xmas/decor/xams_snoman_peek_no_bg_mirror_right.png' %}" alt="">
+      </div>
+      </div>
+
       <div class="col-lg-6 col-sm-12 col-md-6 px-4 d-flex align-items-center">
         <div class="img-box-tech image-visible">
           <!-- <h4 class="hide-head">ERP</h4> -->
+          <div class="position-relative" style="z-index: 1;">
+            <div class="position-absolute" style="margin-top: -8rem;">
+              <img draggable="false" src="{% static 'xmas/decor/lights/light2_full.png' %}" alt="">
+          </div>
+          </div>
           <img src="static/img/team/account.png" alt="ACCOUNTING" />
         </div>
       </div>
       <div class="col-lg-6 col-sm-12 col-md-6 px-1">
         <div class="content-boxs border-0 rounded-4">
-        <h2>Accounting software  </h2>
+        <h2 class="xmas_text text-light">Accounting software  </h2>
         <div class="img-box-tech image-hidden">
+          <div class="position-relative" style="z-index: 1;">
+            <div class="position-absolute" style="margin-top: -8rem;">
+              <img draggable="false" src="{% static 'xmas/decor/lights/light2_full.png' %}" alt="">
+          </div>
+          </div>
           <img src="static/img/team/account.png" alt="ACCOUNTING" />
         </div>
         <p>The software we provide for accounting includes modules 
@@ -1060,6 +1359,39 @@ h5 {
 
 </div>
 
+<div class="position-relative" style="z-index: 1;">
+  <div class="position-absolute">
+    <div class="d-flex">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      
+    </div>
+  </div>
+</div>
+
 <!-- ======= Footer ======= -->
 <footer id="footer">
   <div class="footer-top">
@@ -1183,14 +1515,18 @@ h5 {
   }
   </script>
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3RLTXDEGMP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-3RLTXDEGMP');
+</script>
 
 </body>
 
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PPX9VQQH"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager(noscript)-->
 </html>
 
 

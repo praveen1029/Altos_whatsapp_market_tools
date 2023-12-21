@@ -3,13 +3,6 @@
 {% load static %}
 
 <head>
-    <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-PPX9VQQH');</script>
-<!-- End GoogleTagManage-->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
@@ -33,7 +26,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link href="https://altostechnologies.in/digital" rel="canonical" />
 
   <meta name="google-site-verification" content="LoY-CVPuvtWVxYhyHkd4SRk0wuvxUq9279OLySrjqdc" />
-<meta name="msvalidate.01" content="F7712C338CE3604FDD8BF76FC23584A5"/>
+
 
   <!-- Favicons -->
   <link href="{% static 'img/logo-icon.png' %}" rel="icon">
@@ -56,7 +49,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <!-- Template Main CSS File -->
   <link href="{% static 'css/style.css' %}" rel="stylesheet">
 
-
+  <!-- xmas Theme -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <link rel="stylesheet" href="{% static 'css/xmas.css' %}">
+  <script src="{% static 'js/xmas.js' %}"></script>
 
   <style>
     .logo .first-span {
@@ -76,24 +72,151 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     }
   </style>
+  <style>
+    .mob{
+      margin-top: -20rem;
+      margin-right: -2rem;
+    }
+    .top_tree_effect{
+      margin-top: -1.7rem;
+    }
+    .top_light_effect{
+      margin-top: 4.1rem;
+    }
+    @media screen and (max-width:280px){
+      .top_tree_effect{
+        margin-top: -1.5rem;
+      }
+      .top_light_effect{
+        margin-top: 2rem;
+      }
+      .card_xmas{
+        margin-top: 3rem;
+      }
+      #img_card_hover{
+        visibility: hidden;
+      }
+    }
+    @media screen and (max-width:250px)
+    {  
+      .tree{
+        width: 5rem;
+      }
+      .mob{
+        margin-top: -20rem;
+        margin-right: -2rem;
+      }
+    }
+    /* xmas card */
+    .card_xmas{
+      background-image: url("{% static '/xmas/cards/card1.png' %}");
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: auto;
+      text-shadow: 3px 3px 3px black;
+      border-radius: 10px;
+      transition: all 0.2s linear;
+    }
+    .ts{
+      text-shadow: 1px 1px 1px black;
+    }
+    .ts_md_light{
+      text-shadow: 3px 3px 3px white;
+    }
+    .ts_md_light{
+      text-shadow: 3px 3px 3px black;
+    }
+    #img_card_hover{
+      transition: all 0.2s linear;
+    }
+    #xmas_cap{
+      width: 7rem;
+    }
+    .xmas_cap_top{
+      margin-left: 27.5rem;
+      margin-top: 1.5rem;
+      transform: rotate(10deg);
+    }
+    #user_exp{
+      background-image: url('{% static "xmas/cards/card_bag_1.jpg" %}');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    #xmas_santa_gif{
+      transform: rotate(-10deg);
+      width: 15rem;
+      margin-top: -15rem;
+    }
+    .xmas_santa_git_top{
+      transform: rotate(10deg);
+      margin-left: 5rem;
+    }
+    #xmas_bell_top{
+      width: 5rem;
+    }
+    .xmas_silk_gif{
+      margin-top: 3rem;
+      margin-left: 2rem;
+      transform: rotate(-35deg);
+    }
+    .xmas_star_gif_top{
+      margin-top: -4rem;
+      margin-right: 8rem;
+    }
+    #xmas_star_gif{
+      width: 15rem;
+    }
+    #xmas_bell{
+      width: 5rem;
+    }
+    .xmas_bell_top{
+      /* background-image: url("{% static 'xmas/decor/xmas_ball.png' %}"); */
+      margin-top: -1rem;
+      margin-left: 1rem;
+      /* width: 100%;
+      height: 100%; */
+      /* background-repeat: no-repeat;
+      background-size: contain; */
+    }
+  </style>
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3RLTXDEGMP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
-  gtag('js', new Date());
 
-  gtag('config', 'G-3RLTXDEGMP');
-</script>
+
+<body>
+
+  <div class="position-relative" style="z-index: 1;">
+    <div class="position-absolute" style="width: 100%;height: 100%;">
+      <div class="snow-container"></div>
+    </div>
+  </div>
+
+
 <!-- ======= Header ======= -->
-<header id="header" class="fixed-top green-blue">
+<header id="header" class="fixed-top green-blue" style="padding-top: 1.5rem;background-color: rgba(0, 0, 0, 0.425);z-index: 2;">
+  <div class="position-relative" style="z-index: 1;">
+    <div class="position-absolute start-0 top-0 top_tree_effect">
+      <div class="d-flex">
+        <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+        <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+        <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+        <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+        <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+        <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+        <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+        <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+        <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+        <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+        <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+        <img draggable="false" src="{% static 'xmas/decor/decor_top.png' %}" width="500vw" alt="">
+      </div>
+    </div>
+  </div>
   <div class="container d-flex align-items-center justify-content-lg-between">
 
     <h1 class="logo me-auto me-lg-0">
       <a href="{% url 'text_page' %}">
         <!-- <video src="static/img/logo.mp4"></video> -->
-        <img src="{% static 'img/lg1.gif' %}" class="" alt="Logo Gif">
+        <img src="{% static 'img/lg2.gif' %}" class="" alt="Logo Gif">
         <!-- <img src="static/img/logo-icon.png" class="">
       <span class="first-span">ALTOS Technologies</span>  -->
       </a>
@@ -101,11 +224,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <!-- Uncomment below if you prefer to use an image logo -->
     <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
-    <nav id="navbar" class="navbar order-last order-lg-0">
+    <nav id="navbar" class="navbar order-last order-lg-0" style="z-index: 10;">
       <ul>
         <li><a class="nav-link scrollto hom " href="{% url 'text_page' %}">Home</a></li>
         <li><a class="nav-link scrollto abot" href="{% url 'aboutus' %}">About us</a></li>
-        <li><a class="nav-link scrollto serv" href="{% url 'service' %}">Services</a></li>
+        <li><a style="color: #ff3939;" class="nav-link scrollto serv" href="{% url 'service' %}">Services</a></li>
         <li><a class="nav-link scrollto  cor " href="{% url 'core' %}">Product</a></li>
         <li><a class="nav-link scrollto  cors " href="{% url 'vacancy' %}">Career</a></li>
 
@@ -282,6 +405,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
 </style>
 
+<style>
+  #red_top{
+    width: 10rem;
+  }
+  .red_top_top{
+    margin-left: -2rem;
+    margin-top: -1.45rem;
+  }
+  #red_bottom{
+    width: 10rem;
+  }
+  .red_bottom_top{
+    margin-left: 6.6rem;
+    margin-top: 17.5rem;
+  }
+</style>
+
 <!-- End Service page CSS-->
 
 <div class="container-fluid" id="our-service">
@@ -309,7 +449,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
           <div class="box-service" style="height: 450px;">
             <div class="box-contents">
-  
+              
+              <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_top_top">
+                  <img id="red_top" draggable="false" src="{% static 'xmas/decor/new_ribbons/red_ribbon_top.png' %}" alt="">
+              </div>
+              </div>
+
+              <!-- <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_bottom_top">
+                  <img id="red_bottom" draggable="false" src="{% static 'xmas/decor/new_ribbons/yellow_ribbon_bottom.png' %}" alt="">
+              </div>
+              </div>   -->
+              
               <div class="icon"> <ion-icon name="search" style="color: #ffb700"></ion-icon></div>
               <h4 style="color: #ffb700">SEO Optimization</h4>
               <p>The Process Of Improving Your Site To Increase Its Visibility When People
@@ -324,6 +476,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
           <div class="box-service" style="height: 450px;">
             <div class="box-contents">
+
+              <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_top_top">
+                  <img id="red_top" draggable="false" src="{% static 'xmas/decor/new_ribbons/red_ribbon_top.png' %}" alt="">
+              </div>
+              </div>
+
+              <!-- <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_bottom_top">
+                  <img id="red_bottom" draggable="false" src="{% static 'xmas/decor/new_ribbons/red_ribbon_bottom.png' %}" alt="">
+              </div>
+              </div> -->
+
               <div class="icon"> <i class="bx bx-tachometer" style="color: #ffb700"></i></div>
               <h4 style="color: #ffb700">Content Marketing</span> </h4>
               <p> Content marketing is a marketing strategy used to attract, engage, and retain an audience
@@ -337,6 +502,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
           <div class="box-service" style="height: 450px;">
             <div class="box-contents">
+
+              <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_top_top">
+                  <img id="red_top" draggable="false" src="{% static 'xmas/decor/new_ribbons/red_ribbon_top.png' %}" alt="">
+              </div>
+              </div>
+
+              <!-- <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_bottom_top">
+                  <img id="red_bottom" draggable="false" src="{% static 'xmas/decor/new_ribbons/green_ribbon_bottom.png' %}" alt="">
+              </div>
+              </div> -->
+
               <div class="icon"><ion-icon name="phone-portrait" style="color: #ffb700"></ion-icon></div>
   
               <h4 style="color: #ffb700">App store Optimization</span></h4>
@@ -351,6 +529,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   
           <div class="box-service" style="height: 450px;">
             <div class="box-contents">
+
+              <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_top_top">
+                  <img id="red_top" draggable="false" src="{% static 'xmas/decor/new_ribbons/red_ribbon_top.png' %}" alt="">
+              </div>
+              </div>
+
+              <!-- <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_bottom_top">
+                  <img id="red_bottom" draggable="false" src="{% static 'xmas/decor/new_ribbons/violet_ribbon_bottom.png' %}" alt="">
+              </div>
+              </div>               -->
+
               <div class="icon"> <ion-icon name="archive" style="color: #ffb700"></ion-icon></div>
   
               <h4 style="color: #ffb700">Email Marketing</h4>
@@ -362,9 +553,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               <a href="#" data-bs-toggle="modal" data-bs-target="#enquery-form">Know More </a>
             </div>
           </div>
-  
+          
           <div class="box-service" style="height: 450px;">
             <div class="box-contents">
+
+              <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_top_top">
+                  <img id="red_top" draggable="false" src="{% static 'xmas/decor/new_ribbons/red_ribbon_top.png' %}" alt="">
+              </div>
+              </div>
+
+              <!-- <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_bottom_top">
+                  <img id="red_bottom" draggable="false" src="{% static 'xmas/decor/new_ribbons/blue_ribbon_bottom.png' %}" alt="">
+              </div>
+              </div> -->
+
+
               <div class="icon"> <ion-icon name="chatbox-outline" style="color: #ffb700"></ion-icon></div>
               <h4 style="color: #ffb700">SMS Marketing</span> </h4>
               <p>SMS is one of the most convenient channels for communicating
@@ -378,6 +583,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   
           <div class="box-service" style="height: 450px;">
             <div class="box-contents">
+
+              <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_top_top">
+                  <img id="red_top" draggable="false" src="{% static 'xmas/decor/new_ribbons/red_ribbon_top.png' %}" alt="">
+              </div>
+              </div>
+
+              <!-- <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_bottom_top">
+                  <img id="red_bottom" draggable="false" src="{% static 'xmas/decor/new_ribbons/violet_ribbon_bottom.png' %}" alt="">
+              </div>
+              </div> -->
+
               <div class="icon"> <ion-icon name="chatbubbles-outline" style="color: #ffb700"></ion-icon></div>
               <h4 style="color: #ffb700">WhatsApp Marketing</h4>
               <p> You can use it to send reminders about abandoned shopping carts,
@@ -391,6 +609,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   
           <div class="box-service" style="height: 450px;">
             <div class="box-contents" style="height: 380px;">
+
+              <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_top_top">
+                  <img id="red_top" draggable="false" src="{% static 'xmas/decor/new_ribbons/red_ribbon_top.png' %}" alt="">
+              </div>
+              </div>
+
+              <!-- <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_bottom_top">
+                  <img id="red_bottom" draggable="false" src="{% static 'xmas/decor/new_ribbons/yellow_ribbon_bottom.png' %}" alt="">
+              </div>
+              </div> -->
+
               <div class="icon">
                 <ion-icon name="share-social-outline" style="color: #ffb700"></ion-icon>
               </div>
@@ -407,6 +638,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
           <div class="box-service" style="height: 450px;">
             <div class="box-contents">
+
+              <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_top_top">
+                  <img id="red_top" draggable="false" src="{% static 'xmas/decor/new_ribbons/red_ribbon_top.png' %}" alt="">
+              </div>
+              </div>
+
+              <!-- <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_bottom_top">
+                  <img id="red_bottom" draggable="false" src="{% static 'xmas/decor/new_ribbons/red_ribbon_bottom.png' %}" alt="">
+              </div>
+              </div> -->
+
               <div class="icon">
                 <ion-icon name="logo-linkedin" style="color: #ffb700"></ion-icon>
               </div>
@@ -422,6 +666,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           
           <div class="box-service" style="height: 450px;">
             <div class="box-contents" style="height: 380px;">
+
+               <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_top_top">
+                  <img id="red_top" draggable="false" src="{% static 'xmas/decor/new_ribbons/red_ribbon_top.png' %}" alt="">
+              </div>
+              </div>
+
+              <!-- <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_bottom_top">
+                  <img id="red_bottom" draggable="false" src="{% static 'xmas/decor/new_ribbons/violet_ribbon_bottom.png' %}" alt="">
+              </div>
+              </div> -->
+
               <div class="icon">
                 <ion-icon name="logo-youtube" style="color:#ffb700"></ion-icon>
               </div>
@@ -438,6 +695,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
           <div class="box-service" style="height: 450px;">
             <div class="box-contents" style="height: 380px;">
+
+               <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_top_top">
+                  <img id="red_top" draggable="false" src="{% static 'xmas/decor/new_ribbons/red_ribbon_top.png' %}" alt="">
+              </div>
+              </div>
+
+              <!-- <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_bottom_top">
+                  <img id="red_bottom" draggable="false" src="{% static 'xmas/decor/new_ribbons/red_ribbon_bottom.png' %}" alt="">
+              </div>
+              </div> -->
+
               <div class="icon">
                 <ion-icon name="archive" style="color: #ffb700"></ion-icon>
               </div>
@@ -456,6 +726,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   
           <div class="box-service" style="height: 450px;">
             <div class="box-contents" style="height: 380px;">
+
+               <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_top_top">
+                  <img id="red_top" draggable="false" src="{% static 'xmas/decor/new_ribbons/red_ribbon_top.png' %}" alt="">
+              </div>
+              </div>
+
+              <!-- <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_bottom_top">
+                  <img id="red_bottom" draggable="false" src="{% static 'xmas/decor/new_ribbons/green_ribbon_bottom.png' %}" alt="">
+              </div>
+              </div> -->
+              
               <div class="icon">
                 <ion-icon name="grid" style="color:#ffb700"></ion-icon>
               </div>
@@ -621,6 +904,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         <div class="box-service" style="height: 450px;">
           <div class="box-contents" style="height: 380px;">
+
+            <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_top_top">
+                  <img id="red_top" draggable="false" src="{% static 'xmas/decor/new_ribbons/blue_ribbon_top.png' %}" alt="">
+              </div>
+              </div>
+
+              <!-- <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_bottom_top">
+                  <img id="red_bottom" draggable="false" src="{% static 'xmas/decor/new_ribbons/violet_ribbon_bottom.png' %}" alt="">
+              </div>
+              </div> -->
+
             <div class="icon">
               <ion-icon name="grid" style="color:#ffb700"></ion-icon>
             </div>
@@ -637,6 +933,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         <div class="box-service" style="height: 450px;">
           <div class="box-contents" style="height: 380px;">
+
+             <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_top_top">
+                  <img id="red_top" draggable="false" src="{% static 'xmas/decor/new_ribbons/blue_ribbon_top.png' %}" alt="">
+              </div>
+              </div>
+
+              <!-- <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_bottom_top">
+                  <img id="red_bottom" draggable="false" src="{% static 'xmas/decor/new_ribbons/red_ribbon_bottom.png' %}" alt="">
+              </div>
+              </div> -->
+
+
             <div class="icon">
               <ion-icon name="grid" style="color:#ffb700"></ion-icon>
             </div>
@@ -655,6 +965,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         <div class="box-service" style="height: 450px;">
           <div class="box-contents" style="height: 380px;">
+
+             <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_top_top">
+                  <img id="red_top" draggable="false" src="{% static 'xmas/decor/new_ribbons/blue_ribbon_top.png' %}" alt="">
+              </div>
+              </div>
+
+              <!-- <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_bottom_top">
+                  <img id="red_bottom" draggable="false" src="{% static 'xmas/decor/new_ribbons/yellow_ribbon_bottom.png' %}" alt="">
+              </div>
+              </div> -->
+
             <div class="icon">
               <ion-icon name="grid" style="color:#ffb700"></ion-icon>
             </div>
@@ -674,6 +997,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         <div class="box-service" style="height: 450px;">
           <div class="box-contents" style="height: 380px;">
+
+             <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_top_top">
+                  <img id="red_top" draggable="false" src="{% static 'xmas/decor/new_ribbons/blue_ribbon_top.png' %}" alt="">
+              </div>
+              </div>
+
+              <!-- <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_bottom_top">
+                  <img id="red_bottom" draggable="false" src="{% static 'xmas/decor/new_ribbons/green_ribbon_bottom.png' %}" alt="">
+              </div>
+              </div> -->
+
             <div class="icon">
               <ion-icon name="cloud-done-outline" style="color:#ffb700"></ion-icon>
             </div>
@@ -694,6 +1030,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         <div class="box-service" style="height: 450px;">
           <div class="box-contents" style="height: 380px;">
+
+             <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_top_top">
+                  <img id="red_top" draggable="false" src="{% static 'xmas/decor/new_ribbons/blue_ribbon_top.png' %}" alt="">
+              </div>
+              </div>
+
+              <!-- <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_bottom_top">
+                  <img id="red_bottom" draggable="false" src="{% static 'xmas/decor/new_ribbons/red_ribbon_bottom.png' %}" alt="">
+              </div>
+              </div> -->
+
             <div class="icon">
               <ion-icon name="analytics-outline" style="color:#ffb700"></ion-icon>
 
@@ -714,6 +1063,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         <div class="box-service" style="height: 450px;">
           <div class="box-contents" style="height: 380px;">
+
+             <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_top_top">
+                  <img id="red_top" draggable="false" src="{% static 'xmas/decor/new_ribbons/blue_ribbon_top.png' %}" alt="">
+              </div>
+              </div>
+
+              <!-- <div class="position-relative" style="z-index: 1;">
+                <div class="position-absolute red_bottom_top">
+                  <img id="red_bottom" draggable="false" src="{% static 'xmas/decor/new_ribbons/yellow_ribbon_bottom.png' %}" alt="">
+              </div>
+              </div> -->
+
+
             <div class="icon">
               <ion-icon name="logo-web-component" style="color:#ffb700"></ion-icon>
             </div>
@@ -1004,7 +1367,38 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 <!-- Central Modal Medium Success-->
 
-
+<div class="position-relative" style="z-index: 1;">
+  <div class="position-absolute">
+    <div class="d-flex">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      <img width="150rem" draggable="false" src="{% static 'xmas/decor/white_paint_dripping.png' %}" alt="">
+      
+    </div>
+  </div>
+</div>
 <!-- ======= Footer ======= -->
 <footer id="footer">
   <div class="footer-top">
@@ -1120,11 +1514,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   })
 </script>
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3RLTXDEGMP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
 
+  gtag('config', 'G-3RLTXDEGMP');
+</script>
 
 </body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PPX9VQQH"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager(noscript)-->
+
 </html>

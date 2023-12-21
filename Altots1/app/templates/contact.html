@@ -12,7 +12,7 @@
        background-size:fill;
   }
   #navbar .cont{
-    color: #189aa6;
+    color: #ff3939;
     font-weight: 800;
  
   }
@@ -101,6 +101,24 @@
    }
 </style>
 
+<style>
+  #santapen{
+    width: 15rem;
+  }
+  .santapen_top{
+    margin-top: -7.8rem;
+    margin-left: 30rem;
+  }
+  @media screen and (max-width:540px){
+    #santapen{
+      width: 7rem;
+    }
+    .santapen_top{
+      margin-top: -4.8rem;
+      margin-left: 30rem;
+    }
+  }
+</style>
 
 
 
@@ -120,11 +138,18 @@
       <div class="section-title d-flex justify-content-start">
         <div class="contact-head">
           <h2>Contact</h2>
-          <p style="color: rgb(39, 112, 141);">Contact Us</p>
+          <p class="text-" style="color: white;text-shadow: 3px 3px 10px rgba(255, 0, 0, 0.712);">Contact Us</p>
         </div>
       </div>
 
       <div id="contact-form-section" class="row mb-0">
+
+        <div class="position-relative" style="z-index: 1;">
+          <div class="position-absolute santapen_top end-0">
+            <img id="santapen" draggable="false" src="{% static 'xmas/decor/santa_with_pen.png' %}" alt="">
+        </div>
+        </div>
+
         <div class="col-lg-12 col-md-12 mt-5 mb-3 mt-lg-0 d-flex justify-content-center">
 
           <form action="{% url 'meeasges_send' %}" method="post"  class="email-form">
@@ -162,7 +187,7 @@
           <div class="location-details location-first">
             <div class="info row" style="background: transparent;">
               <div class="address col-md-6 mt-3">
-                <i class="bi bi-geo-alt" style="background-color:#0fa49b; color:rgb(0, 0, 0)"></i>
+                <i class="bi bi-geo-alt bg-danger text-light" style="background-color:#0fa49b; color:rgb(0, 0, 0)"></i>
                 <h4 style="color: #fdfcfb;">Location:</h4>
                 <!-- <p class="mt-2 pb-2" style="color: #fdfcfb;">Kerala Branch</h6> -->
                 <p style="color: rgb(169, 169, 169);"> 1st Floor - Thapasya Building
@@ -175,13 +200,13 @@
               </div>
   
               <div class="email col-md-6 mt-3">
-                <i class="bi bi-envelope"  style="background-color:#0fa49b; color:rgb(0, 0, 0)"></i>
+                <i class="bi bi-envelope bg-danger text-light"  style="background-color:#0fa49b; color:rgb(0, 0, 0)"></i>
                 <h4 style="color: #fdfcfb;">Email:</h4>
                 <p style="color: rgb(169, 169, 169);">Info@ altostechnologies.com</p>
               </div>
   
               <div class="phone col-md-6 mt-3">
-                <i class="bi bi-phone"  style="background-color:#0fa49b; color:rgb(0, 0, 0)"></i>
+                <i class="bi bi-phone bg-danger text-light"  style="background-color:#0fa49b; color:rgb(0, 0, 0)"></i>
                 <h4 style="color: #fdfcfb;">Call:</h4>
                 <p style="color: rgb(169, 169, 169);"> +91 90741 56818</p>
                 <!-- <p style="color: rgb(169, 169, 169);">Tamilnadu -  +91 73065 42853</p> -->
@@ -198,7 +223,7 @@
           <div class="location-details">
             <div class="info row d-flex justify-content-end" style="background: transparent;">
               <div class=" col-md-6 mt-3">
-                <i class="bi bi-geo-alt" style="background-color:#0fa49b; color:rgb(0, 0, 0)"></i>
+                <i class="bi bi-geo-alt bg-danger text-light" style="background-color:#0fa49b; color:rgb(0, 0, 0)"></i>
                 <h4 style="color: #fdfcfb;">Location:</h4>
                 <!-- <p class="mt-2 pb-2" style="color: #fdfcfb;">Kerala Branch</h6>
                 <p style="color: rgb(169, 169, 169);"> 1st Floor - Thapasya Building
@@ -211,13 +236,13 @@
               </div>
   
               <div class="email col-md-6 mt-3">
-                <i class="bi bi-envelope"  style="background-color:#0fa49b; color:rgb(0, 0, 0)"></i>
+                <i class="bi bi-envelope bg-danger text-light"  style="background-color:#0fa49b; color:rgb(0, 0, 0)"></i>
                 <h4 style="color: #fdfcfb;">Email:</h4>
                 <p style="color: rgb(169, 169, 169);">Info@ altostechnologies.com</p>
               </div>
   
               <div class="phone col-md-6 mt-3">
-                <i class="bi bi-phone"  style="background-color:#0fa49b; color:rgb(0, 0, 0)"></i>
+                <i class="bi bi-phone bg-danger text-light"  style="background-color:#0fa49b; color:rgb(0, 0, 0)"></i>
                 <h4 style="color: #fdfcfb;">Call:</h4>
                 <!-- <p style="color: rgb(169, 169, 169);">Kerala -  +91 90741 56818</p> -->
                 <p style="color: rgb(169, 169, 169);">  +91 73065 42853</p>
@@ -301,7 +326,7 @@
   </section><!-- End Contact Section -->
 </div>
 
- 
+  
       {% endblock %}
 
 
